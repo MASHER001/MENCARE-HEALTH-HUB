@@ -589,3 +589,15 @@ The MVP focuses on delivering reliable health education, simple symptom awarenes
 LICENSE 
 
 Health information and references used within the application remain the property of their respective organizations and authors.
+
+
+
+
+(suggested colors )
+#1C5362 deep teal
+#A6DEDD light aqua
+#A7DCB8 mint green
+#ECEEE8 off-white
+#A6C5C7 muted blue-gray
+#FFFFFF white
+
