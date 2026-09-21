@@ -1,0 +1,438 @@
+/* =========================================================
+   MENCARE HEALTH HUB
+   ANIMATIONS
+   ADMIN DASHBOARD
+========================================================= */
+
+
+/* =========================================================
+   PAGE ENTRANCE
+========================================================= */
+
+.admin-content {
+    animation:
+        adminContentEnter 0.45s ease both;
+}
+
+@keyframes adminContentEnter {
+
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.admin-sidebar {
+    transition:
+        transform 0.25s ease;
+}
+
+
+/* =========================================================
+   STAT CARDS
+========================================================= */
+
+.stat-card {
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 28px rgba(32, 37, 34, 0.07);
+}
+
+
+/* =========================================================
+   QUICK ACTIONS
+========================================================= */
+
+.quick-action {
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+.quick-action:hover {
+    transform: translateY(-2px);
+
+    border-color: var(--mc-secondary);
+
+    box-shadow:
+        0 9px 22px rgba(32, 37, 34, 0.06);
+}
+
+.quick-action-arrow {
+    transition:
+        transform 0.2s ease;
+}
+
+.quick-action:hover .quick-action-arrow {
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.admin-nav-link {
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        padding-left 0.2s ease;
+}
+
+.admin-nav-link:not(.active):hover {
+    padding-left: 16px;
+}
+
+
+/* =========================================================
+   VIEW WEBSITE BUTTON
+========================================================= */
+
+.view-site-btn {
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.view-site-btn:hover {
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   ACTIVITY ITEMS
+========================================================= */
+
+.activity-item {
+    transition:
+        background 0.2s ease;
+}
+
+.activity-item:hover {
+    background:
+        rgba(246, 243, 237, 0.55);
+}
+
+
+/* =========================================================
+   ACTIVITY MARKERS
+========================================================= */
+
+.activity-marker {
+    transition:
+        transform 0.2s ease;
+}
+
+.activity-item:hover .activity-marker {
+    transform: scale(1.06);
+}
+
+
+/* =========================================================
+   STAT NUMBER
+========================================================= */
+
+.stat-number {
+    animation:
+        numberReveal 0.5s ease both;
+}
+
+@keyframes numberReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   WELCOME SECTION
+========================================================= */
+
+.admin-welcome {
+    animation:
+        welcomeReveal 0.5s ease both;
+}
+
+@keyframes welcomeReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+
+        scroll-behavior: auto !important;
+    }
+
+}
+/* =========================================================
+   MENCARE HEALTH HUB
+   ANIMATIONS
+   ADMIN DASHBOARD
+========================================================= */
+
+
+/* =========================================================
+   PAGE ENTRANCE
+========================================================= */
+
+.admin-content {
+    animation:
+        adminContentEnter 0.45s ease both;
+}
+
+@keyframes adminContentEnter {
+
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.admin-sidebar {
+    transition:
+        transform 0.25s ease;
+}
+
+
+/* =========================================================
+   STAT CARDS
+========================================================= */
+
+.stat-card {
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 28px rgba(32, 37, 34, 0.07);
+}
+
+
+/* =========================================================
+   QUICK ACTIONS
+========================================================= */
+
+.quick-action {
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+.quick-action:hover {
+    transform: translateY(-2px);
+
+    border-color: var(--mc-secondary);
+
+    box-shadow:
+        0 9px 22px rgba(32, 37, 34, 0.06);
+}
+
+.quick-action-arrow {
+    transition:
+        transform 0.2s ease;
+}
+
+.quick-action:hover .quick-action-arrow {
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.admin-nav-link {
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        padding-left 0.2s ease;
+}
+
+.admin-nav-link:not(.active):hover {
+    padding-left: 16px;
+}
+
+
+/* =========================================================
+   VIEW WEBSITE BUTTON
+========================================================= */
+
+.view-site-btn {
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.view-site-btn:hover {
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   ACTIVITY ITEMS
+========================================================= */
+
+.activity-item {
+    transition:
+        background 0.2s ease;
+}
+
+.activity-item:hover {
+    background:
+        rgba(246, 243, 237, 0.55);
+}
+
+
+/* =========================================================
+   ACTIVITY MARKERS
+========================================================= */
+
+.activity-marker {
+    transition:
+        transform 0.2s ease;
+}
+
+.activity-item:hover .activity-marker {
+    transform: scale(1.06);
+}
+
+
+/* =========================================================
+   STAT NUMBER
+========================================================= */
+
+.stat-number {
+    animation:
+        numberReveal 0.5s ease both;
+}
+
+@keyframes numberReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   WELCOME SECTION
+========================================================= */
+
+.admin-welcome {
+    animation:
+        welcomeReveal 0.5s ease both;
+}
+
+@keyframes welcomeReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+
+        scroll-behavior: auto !important;
+    }
+
+}
