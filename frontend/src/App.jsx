@@ -5,6 +5,7 @@ import MythFacts from './pages/MythFacts';
 import AdminLogin from './pages/AdminLogin';
 import AdminHealthFacts from './pages/AdminHealthFacts';
 import AdminMythFacts from './pages/AdminMythFacts';
+import ProjectBot from './components/ProjectBot';
 
 function ProtectedRoute({ children }) {
   const token = localStorage.getItem('mencare_token');
@@ -123,6 +124,8 @@ function App() {
           </div>
         </div>
       </footer>
+
+      <ProjectBot />
     </div>
   );
 }
