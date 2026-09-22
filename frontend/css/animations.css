@@ -112,3 +112,84 @@
     }
 
 }
+/* =========================================================
+   ADMIN LOGIN ANIMATIONS
+========================================================= */
+
+.admin-login-card {
+    animation:
+        adminLoginCardIn 0.5s ease both;
+}
+
+
+@keyframes adminLoginCardIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+.admin-login-brand-content {
+    animation:
+        adminBrandIn 0.6s ease both;
+}
+
+
+@keyframes adminBrandIn {
+
+    from {
+        opacity: 0;
+        transform: translateX(-15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+.admin-login-alert {
+    animation:
+        adminAlertIn 0.25s ease both;
+}
+
+
+@keyframes adminAlertIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+.admin-login-submit:active {
+    transform: scale(0.99);
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    .admin-login-card,
+    .admin-login-brand-content,
+    .admin-login-alert {
+        animation: none;
+    }
+
+}
