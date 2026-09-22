@@ -1,0 +1,904 @@
+/* =========================================================
+   MENCARE HEALTH HUB
+   ANIMATIONS
+   ADMIN DASHBOARD
+========================================================= */
+
+
+/* =========================================================
+   PAGE ENTRANCE
+========================================================= */
+
+.admin-content {
+    animation:
+        adminContentEnter 0.45s ease both;
+}
+
+@keyframes adminContentEnter {
+
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.admin-sidebar {
+    transition:
+        transform 0.25s ease;
+}
+
+
+/* =========================================================
+   STAT CARDS
+========================================================= */
+
+.stat-card {
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 28px rgba(32, 37, 34, 0.07);
+}
+
+
+/* =========================================================
+   QUICK ACTIONS
+========================================================= */
+
+.quick-action {
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+.quick-action:hover {
+    transform: translateY(-2px);
+
+    border-color: var(--mc-secondary);
+
+    box-shadow:
+        0 9px 22px rgba(32, 37, 34, 0.06);
+}
+
+.quick-action-arrow {
+    transition:
+        transform 0.2s ease;
+}
+
+.quick-action:hover .quick-action-arrow {
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.admin-nav-link {
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        padding-left 0.2s ease;
+}
+
+.admin-nav-link:not(.active):hover {
+    padding-left: 16px;
+}
+
+
+/* =========================================================
+   VIEW WEBSITE BUTTON
+========================================================= */
+
+.view-site-btn {
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.view-site-btn:hover {
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   ACTIVITY ITEMS
+========================================================= */
+
+.activity-item {
+    transition:
+        background 0.2s ease;
+}
+
+.activity-item:hover {
+    background:
+        rgba(246, 243, 237, 0.55);
+}
+
+
+/* =========================================================
+   ACTIVITY MARKERS
+========================================================= */
+
+.activity-marker {
+    transition:
+        transform 0.2s ease;
+}
+
+.activity-item:hover .activity-marker {
+    transform: scale(1.06);
+}
+
+
+/* =========================================================
+   STAT NUMBER
+========================================================= */
+
+.stat-number {
+    animation:
+        numberReveal 0.5s ease both;
+}
+
+@keyframes numberReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   WELCOME SECTION
+========================================================= */
+
+.admin-welcome {
+    animation:
+        welcomeReveal 0.5s ease both;
+}
+
+@keyframes welcomeReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+
+        scroll-behavior: auto !important;
+    }
+
+}
+/* =========================================================
+   MENCARE HEALTH HUB
+   ANIMATIONS
+   ADMIN DASHBOARD
+========================================================= */
+
+
+/* =========================================================
+   PAGE ENTRANCE
+========================================================= */
+
+.admin-content {
+    animation:
+        adminContentEnter 0.45s ease both;
+}
+
+@keyframes adminContentEnter {
+
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.admin-sidebar {
+    transition:
+        transform 0.25s ease;
+}
+
+
+/* =========================================================
+   STAT CARDS
+========================================================= */
+
+.stat-card {
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 28px rgba(32, 37, 34, 0.07);
+}
+
+
+/* =========================================================
+   QUICK ACTIONS
+========================================================= */
+
+.quick-action {
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+.quick-action:hover {
+    transform: translateY(-2px);
+
+    border-color: var(--mc-secondary);
+
+    box-shadow:
+        0 9px 22px rgba(32, 37, 34, 0.06);
+}
+
+.quick-action-arrow {
+    transition:
+        transform 0.2s ease;
+}
+
+.quick-action:hover .quick-action-arrow {
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.admin-nav-link {
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        padding-left 0.2s ease;
+}
+
+.admin-nav-link:not(.active):hover {
+    padding-left: 16px;
+}
+
+
+/* =========================================================
+   VIEW WEBSITE BUTTON
+========================================================= */
+
+.view-site-btn {
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.view-site-btn:hover {
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   ACTIVITY ITEMS
+========================================================= */
+
+.activity-item {
+    transition:
+        background 0.2s ease;
+}
+
+.activity-item:hover {
+    background:
+        rgba(246, 243, 237, 0.55);
+}
+
+
+/* =========================================================
+   ACTIVITY MARKERS
+========================================================= */
+
+.activity-marker {
+    transition:
+        transform 0.2s ease;
+}
+
+.activity-item:hover .activity-marker {
+    transform: scale(1.06);
+}
+
+
+/* =========================================================
+   STAT NUMBER
+========================================================= */
+
+.stat-number {
+    animation:
+        numberReveal 0.5s ease both;
+}
+
+@keyframes numberReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   WELCOME SECTION
+========================================================= */
+
+.admin-welcome {
+    animation:
+        welcomeReveal 0.5s ease both;
+}
+
+@keyframes welcomeReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+
+        scroll-behavior: auto !important;
+    }
+
+}
+/* =========================================================
+   MENCARE — SHARED ANIMATIONS
+========================================================= */
+
+
+/* ---------------------------------------------------------
+   Header
+--------------------------------------------------------- */
+
+.site-header {
+    transition:
+        box-shadow 220ms ease,
+        background 220ms ease;
+}
+
+.site-header.scrolled {
+    box-shadow:
+        0 5px 20px rgba(32, 37, 34, 0.08);
+}
+
+
+/* ---------------------------------------------------------
+   Condition Card
+--------------------------------------------------------- */
+
+.condition-card {
+    transition:
+        transform 220ms ease,
+        box-shadow 220ms ease;
+}
+
+.condition-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 18px 42px rgba(32, 37, 34, 0.13);
+}
+
+
+/* ---------------------------------------------------------
+   Tags
+--------------------------------------------------------- */
+
+.topic-tag {
+    transition:
+        transform 160ms ease,
+        background 160ms ease;
+}
+
+.topic-tag:hover {
+    transform: translateY(-1px);
+}
+
+
+/* ---------------------------------------------------------
+   Buttons
+--------------------------------------------------------- */
+
+.condition-learn-btn span {
+    transition:
+        transform 180ms ease;
+}
+
+.condition-learn-btn:hover span {
+    transform: translateX(4px);
+}
+
+
+/* ---------------------------------------------------------
+   Save Button
+--------------------------------------------------------- */
+
+.condition-save-btn .save-icon {
+    transition:
+        transform 180ms ease;
+}
+
+.condition-save-btn:hover .save-icon {
+    transform: scale(1.12);
+}
+
+.condition-save-btn.saved .save-icon {
+    animation: savePulse 260ms ease;
+}
+
+
+/* ---------------------------------------------------------
+   Scroll Reveal
+--------------------------------------------------------- */
+
+.reveal-on-scroll {
+    opacity: 0;
+
+    transform:
+        translateY(18px);
+
+    transition:
+        opacity 500ms ease,
+        transform 500ms ease;
+}
+
+.reveal-on-scroll.is-visible {
+    opacity: 1;
+
+    transform:
+        translateY(0);
+}
+
+
+/* ---------------------------------------------------------
+   Save Animation
+--------------------------------------------------------- */
+
+@keyframes savePulse {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.3);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   Reduced Motion
+--------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+    }
+
+    .condition-card:hover {
+        transform: none;
+    }
+
+}
+/* =========================================================
+   FACILITY CARD ANIMATIONS
+========================================================= */
+
+.facility-info-card {
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.facility-info-card:hover {
+    transform: translateY(-4px);
+
+    border-color: rgba(24, 60, 53, 0.25);
+
+    box-shadow:
+        0 14px 35px rgba(32, 37, 34, 0.08);
+}
+
+
+.facility-visual-card {
+    animation: facilityFloat 5s ease-in-out infinite;
+}
+
+
+@keyframes facilityFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+
+}
+
+
+.facility-save-btn.saved .save-icon {
+    animation: facilitySavePulse 0.3s ease;
+}
+
+
+@keyframes facilitySavePulse {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.3);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+.facility-notice {
+    animation: facilityNoticeReveal 0.7s ease both;
+}
+
+
+@keyframes facilityNoticeReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    .facility-visual-card,
+    .facility-info-card,
+    .facility-notice {
+        animation: none;
+        transition: none;
+    }
+
+}
+/* =========================================================
+   HEALTH FACT CARD RESPONSIVE
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .fact-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .fact-visual {
+        min-height: 280px;
+    }
+
+    .fact-details-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .fact-sidebar-card {
+        position: static;
+    }
+
+    .fact-source-card {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .source-details {
+        width: 100%;
+        padding-left: 0;
+        padding-top: 20px;
+
+        border-left: none;
+        border-top: 1px solid var(--mc-border);
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .fact-hero {
+        padding: 55px 0;
+    }
+
+    .fact-details-section {
+        padding: 55px 0;
+    }
+
+    .fact-content-card,
+    .fact-sidebar-card {
+        padding: 25px;
+    }
+
+    .fact-source-section {
+        padding-bottom: 55px;
+    }
+
+    .fact-source-card {
+        padding: 25px;
+    }
+
+    .fact-cta {
+        padding: 60px 0;
+    }
+
+    .fact-cta-actions {
+        flex-direction: column;
+    }
+
+    .fact-cta-actions .btn {
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .fact-main-content h1 {
+        font-size: 2.35rem;
+    }
+
+    .fact-meta {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .fact-visual {
+        min-height: 230px;
+        padding: 30px 20px;
+    }
+
+    .fact-symbol {
+        width: 80px;
+        height: 80px;
+
+        font-size: 2.5rem;
+    }
+
+    .fact-key-point {
+        padding: 18px;
+    }
+
+    .fact-save-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+}
+/* =========================================================
+   FOOTER ANIMATIONS
+========================================================= */
+
+.footer-column a {
+    transition:
+        color 0.2s ease,
+        padding-left 0.2s ease;
+}
+
+.footer-bottom-links a {
+    transition: color 0.2s ease;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    .footer-column a,
+    .footer-bottom-links a {
+        transition: none;
+    }
+
+}
+/* =========================================================
+   HEALTH CARD ANIMATIONS
+========================================================= */
+
+.health-card {
+    animation: healthCardReveal 0.7s ease both;
+}
+
+@keyframes healthCardReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+.health-overview-item {
+    animation: overviewReveal 0.5s ease both;
+}
+
+.health-overview-item:nth-child(2) {
+    animation-delay: 0.08s;
+}
+
+.health-overview-item:nth-child(3) {
+    animation-delay: 0.16s;
+}
+
+.health-overview-item:nth-child(4) {
+    animation-delay: 0.24s;
+}
+
+
+@keyframes overviewReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+.save-health-btn.saved .save-icon {
+    animation: saveHealthPulse 0.35s ease;
+}
+
+@keyframes saveHealthPulse {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.35);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    .health-card,
+    .health-overview-item {
+        animation: none;
+    }
+
+    .save-health-btn.saved .save-icon {
+        animation: none;
+    }
+
+}
