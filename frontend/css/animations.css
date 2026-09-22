@@ -902,3 +902,462 @@
     }
 
 }
+ /* =========================================================
+   MENCARE HEALTH HUB
+   ANIMATIONS CSS
+   Shared Admin Animations
+========================================================= */
+
+
+/* =========================================================
+   GLOBAL TRANSITIONS
+========================================================= */
+
+.admin-sidebar a,
+.admin-btn,
+.table-action,
+.admin-stat-card,
+.admin-panel,
+.admin-search-box input,
+.admin-select,
+.admin-form-group input,
+.admin-form-group select,
+.admin-form-group textarea,
+.admin-logout-btn,
+.admin-menu-toggle,
+.modal-close,
+.category-badge,
+.status-badge {
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.admin-sidebar a:hover {
+    transform: translateX(3px);
+}
+
+
+.admin-sidebar a.active {
+    animation:
+        adminNavActive
+        0.25s
+        ease-out;
+}
+
+
+@keyframes adminNavActive {
+
+    from {
+        opacity: 0.5;
+        transform: translateX(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+/* =========================================================
+   BUTTON HOVER
+========================================================= */
+
+.admin-btn:hover {
+    transform: translateY(-1px);
+}
+
+
+.admin-btn:active {
+    transform: translateY(0);
+}
+
+
+.admin-btn-primary:hover {
+    box-shadow:
+        0 7px 18px
+        rgba(24, 60, 53, 0.15);
+}
+
+
+.admin-btn-secondary:hover {
+    box-shadow:
+        0 5px 14px
+        rgba(32, 37, 34, 0.08);
+}
+
+
+/* =========================================================
+   STATISTICS CARDS
+========================================================= */
+
+.admin-stat-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(24, 60, 53, 0.08);
+}
+
+
+/* =========================================================
+   TABLE ACTIONS
+========================================================= */
+
+.table-action:hover {
+    transform: translateY(-1px);
+}
+
+
+.table-action:active {
+    transform: translateY(0);
+}
+
+
+.table-action.danger:hover {
+    box-shadow:
+        0 4px 12px
+        rgba(185, 74, 72, 0.12);
+}
+
+
+/* =========================================================
+   CONDITION ICON
+========================================================= */
+
+.condition-mini-icon {
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.condition-name-cell:hover
+.condition-mini-icon {
+    transform: scale(1.05);
+}
+
+
+/* =========================================================
+   SEARCH INPUT
+========================================================= */
+
+.admin-search-box input:focus {
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   FORM FOCUS
+========================================================= */
+
+.admin-form-group input:focus,
+.admin-form-group select:focus,
+.admin-form-group textarea:focus {
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.admin-modal {
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.22s ease,
+        visibility 0.22s ease;
+}
+
+
+.admin-modal.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.admin-modal-overlay {
+    transition:
+        opacity 0.22s ease;
+}
+
+
+.admin-modal-dialog {
+    transform:
+        translateY(20px)
+        scale(0.98);
+
+    opacity: 0;
+
+    transition:
+        transform 0.25s ease,
+        opacity 0.25s ease;
+}
+
+
+.admin-modal.show
+.admin-modal-dialog {
+    transform:
+        translateY(0)
+        scale(1);
+
+    opacity: 1;
+}
+
+
+/* =========================================================
+   MODAL CLOSE BUTTON
+========================================================= */
+
+.modal-close:hover {
+    transform:
+        rotate(90deg)
+        scale(1.05);
+}
+
+
+/* =========================================================
+   CONDITION DETAILS
+========================================================= */
+
+.condition-detail-block {
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.condition-detail-block:hover {
+    border-color:
+        rgba(113, 140, 126, 0.55);
+
+    box-shadow:
+        0 5px 15px
+        rgba(24, 60, 53, 0.04);
+}
+
+
+/* =========================================================
+   CATEGORY BADGES
+========================================================= */
+
+.category-badge:hover,
+.status-badge:hover {
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.admin-empty-state {
+    animation:
+        fadeInUp
+        0.3s
+        ease-out;
+}
+
+
+@keyframes fadeInUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   TABLE ROW APPEARANCE
+========================================================= */
+
+.condition-row {
+    animation:
+        rowAppear
+        0.3s
+        ease-out;
+}
+
+
+@keyframes rowAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   NOTIFICATION / ALERT
+========================================================= */
+
+.admin-alert {
+    animation:
+        alertIn
+        0.3s
+        ease-out;
+}
+
+
+@keyframes alertIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.admin-loading {
+    animation:
+        loadingPulse
+        1.3s
+        ease-in-out
+        infinite;
+}
+
+
+@keyframes loadingPulse {
+
+    0%,
+    100% {
+        opacity: 0.45;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+}
+
+
+/* =========================================================
+   SPINNER
+========================================================= */
+
+.admin-spinner {
+    animation:
+        adminSpin
+        0.8s
+        linear
+        infinite;
+}
+
+
+@keyframes adminSpin {
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* =========================================================
+   SUCCESS FEEDBACK
+========================================================= */
+
+.admin-success {
+    animation:
+        successPop
+        0.3s
+        ease-out;
+}
+
+
+@keyframes successPop {
+
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    70% {
+        transform: scale(1.02);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.admin-menu-toggle:hover {
+    transform: scale(1.05);
+}
+
+
+.admin-menu-toggle:active {
+    transform: scale(0.95);
+}
+
+
+/* =========================================================
+   LOGOUT
+========================================================= */
+
+.admin-logout-btn:hover {
+    transform: translateX(3px);
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+}
