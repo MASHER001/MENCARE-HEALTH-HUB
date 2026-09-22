@@ -1,0 +1,143 @@
+/* =========================================================
+   FACILITY MANAGEMENT
+========================================================= */
+
+.facility-service-options {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+
+    padding: 14px;
+
+    border: 1px solid var(--mc-border);
+
+    border-radius: 10px;
+
+    background: var(--mc-surface);
+}
+
+
+.facility-checkbox {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 10px;
+
+    border-radius: 8px;
+
+    color: var(--mc-text);
+
+    font-size: 0.8rem;
+
+    cursor: pointer;
+}
+
+
+.facility-checkbox:hover {
+    background:
+        var(--mc-background);
+}
+
+
+.facility-checkbox input {
+    width: 16px;
+    height: 16px;
+
+    accent-color:
+        var(--mc-primary);
+
+    cursor: pointer;
+}
+
+
+.facility-checkbox span {
+    line-height: 1.4;
+}
+
+
+/* Facility table */
+
+.facility-row td {
+    vertical-align: middle;
+}
+
+
+/* Facility location */
+
+.facility-location {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.facility-location strong {
+    color: var(--mc-text);
+
+    font-size: 0.82rem;
+}
+
+
+.facility-location span {
+    color: var(--mc-text-muted);
+
+    font-size: 0.72rem;
+}
+
+
+/* Facility contact */
+
+.facility-contact {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.facility-contact span {
+    color: var(--mc-text-muted);
+
+    font-size: 0.74rem;
+}
+
+
+/* Facility modal */
+
+.facility-modal-dialog {
+    width: min(
+        900px,
+        calc(100% - 40px)
+    );
+}
+
+
+/* Facility view */
+
+.facility-view-services {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+
+/* Responsive service options */
+
+@media (max-width: 650px) {
+
+    .facility-service-options {
+        grid-template-columns: 1fr;
+    }
+
+}

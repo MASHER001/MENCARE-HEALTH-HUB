@@ -1,0 +1,77 @@
+/* =========================================================
+   HEALTH FACTS RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .health-facts-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .facts-toolbar {
+        grid-template-columns: 1fr;
+        align-items: stretch;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .health-facts-section {
+        padding: 60px 0;
+    }
+
+    .health-facts-section .section-heading {
+        display: block;
+    }
+
+    #factCount {
+        margin-top: 12px;
+    }
+
+    .health-facts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .facts-information-box {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .health-facts-controls {
+        padding: 25px 0;
+    }
+
+    .filter-buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .fact-filter-btn {
+        width: 100%;
+    }
+
+    .health-fact-card {
+        padding: 22px;
+    }
+
+    .health-fact-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .fact-card-footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .facts-information-box {
+        padding: 22px;
+    }
+
+}
