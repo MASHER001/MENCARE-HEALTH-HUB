@@ -1,5 +1,7 @@
 /* =========================================================
-   MENCARE MAIN JAVASCRIPT
+   MENCARE HEALTH HUB
+   MAIN JAVASCRIPT
+   Shared functionality for public + admin pages
 ========================================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -9,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* =====================================================
        MOBILE NAVIGATION
+       Works on public pages
     ===================================================== */
 
     const menuToggle =
@@ -20,32 +23,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (menuToggle && mobileNav) {
 
-        menuToggle.addEventListener(
-            "click",
-            () => {
+        menuToggle.addEventListener("click", () => {
 
-                const isOpen =
-                    mobileNav.classList.toggle("open");
+            const isOpen =
+                mobileNav.classList.toggle("open");
 
-                menuToggle.classList.toggle(
-                    "active",
-                    isOpen
-                );
+            menuToggle.classList.toggle(
+                "active",
+                isOpen
+            );
 
-                menuToggle.setAttribute(
-                    "aria-expanded",
-                    String(isOpen)
-                );
+            menuToggle.setAttribute(
+                "aria-expanded",
+                String(isOpen)
+            );
 
-                menuToggle.setAttribute(
-                    "aria-label",
-                    isOpen
-                        ? "Close navigation menu"
-                        : "Open navigation menu"
-                );
+            menuToggle.setAttribute(
+                "aria-label",
+                isOpen
+                    ? "Close navigation menu"
+                    : "Open navigation menu"
+            );
 
-            }
-        );
+        });
 
 
         /* Close mobile menu after clicking a link */
@@ -53,32 +53,26 @@ document.addEventListener("DOMContentLoaded", () => {
         const mobileLinks =
             mobileNav.querySelectorAll("a");
 
+
         mobileLinks.forEach(link => {
 
-            link.addEventListener(
-                "click",
-                () => {
+            link.addEventListener("click", () => {
 
-                    mobileNav.classList.remove(
-                        "open"
-                    );
+                mobileNav.classList.remove("open");
 
-                    menuToggle.classList.remove(
-                        "active"
-                    );
+                menuToggle.classList.remove("active");
 
-                    menuToggle.setAttribute(
-                        "aria-expanded",
-                        "false"
-                    );
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
 
-                    menuToggle.setAttribute(
-                        "aria-label",
-                        "Open navigation menu"
-                    );
+                menuToggle.setAttribute(
+                    "aria-label",
+                    "Open navigation menu"
+                );
 
-                }
-            );
+            });
 
         });
 
@@ -87,32 +81,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* =====================================================
        HEADER SCROLL EFFECT
+       Supports both:
+       .site-header
+       #siteHeader
     ===================================================== */
+
+    const publicHeader =
+        document.querySelector(".site-header");
 
     const siteHeader =
         document.getElementById("siteHeader");
 
 
-    if (siteHeader) {
+    const header =
+        publicHeader || siteHeader;
 
-        const updateHeader =
-            () => {
 
-                if (window.scrollY > 20) {
+    if (header) {
 
-                    siteHeader.classList.add(
-                        "scrolled"
-                    );
+        const updateHeader = () => {
 
-                } else {
+            if (window.scrollY > 20) {
 
-                    siteHeader.classList.remove(
-                        "scrolled"
-                    );
+                header.classList.add("scrolled");
 
-                }
+            } else {
 
-            };
+                header.classList.remove("scrolled");
+
+            }
+
+        };
 
 
         window.addEventListener(
@@ -121,6 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
             { passive: true }
         );
 
+
         updateHeader();
 
     }
@@ -128,6 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* =====================================================
        ACTIVE NAVIGATION
+       Supports links using [data-nav]
     ===================================================== */
 
     const currentPage =
@@ -148,13 +149,15 @@ document.addEventListener("DOMContentLoaded", () => {
         const href =
             link.getAttribute("href");
 
+
         if (!href) {
             return;
         }
 
 
         const targetPage =
-            href.split("/")
+            href
+                .split("/")
                 .pop()
                 .split("?")[0]
                 .toLowerCase();
@@ -189,7 +192,46 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
+       GENERIC CLOSE BUTTONS
+       Elements can use:
+
+       data-close-target="elementId"
+    ===================================================== */
+
+    const closeButtons =
+        document.querySelectorAll(
+            "[data-close-target]"
+        );
+
+
+    closeButtons.forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            const targetId =
+                button.dataset.closeTarget;
+
+
+            const target =
+                document.getElementById(targetId);
+
+
+            if (target) {
+
+                target.classList.remove("open");
+
+                target.classList.remove("show");
+
+            }
+
+        });
+
+    });
+
+
+    /* =====================================================
        ESCAPE KEY
+       Close mobile navigation
     ===================================================== */
 
     document.addEventListener(
@@ -206,9 +248,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 mobileNav.classList.contains("open")
             ) {
 
-                mobileNav.classList.remove(
-                    "open"
-                );
+                mobileNav.classList.remove("open");
+
 
                 if (menuToggle) {
 
@@ -219,6 +260,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     menuToggle.setAttribute(
                         "aria-expanded",
                         "false"
+                    );
+
+                    menuToggle.setAttribute(
+                        "aria-label",
+                        "Open navigation menu"
                     );
 
                 }

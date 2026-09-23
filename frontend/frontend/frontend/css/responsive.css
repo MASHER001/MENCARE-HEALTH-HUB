@@ -1,0 +1,174 @@
+/* =========================================================
+   HEALTH FACTS RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .health-facts-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .facts-toolbar {
+        grid-template-columns: 1fr;
+        align-items: stretch;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .health-facts-section {
+        padding: 60px 0;
+    }
+
+    .health-facts-section .section-heading {
+        display: block;
+    }
+
+    #factCount {
+        margin-top: 12px;
+    }
+
+    .health-facts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .facts-information-box {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .health-facts-controls {
+        padding: 25px 0;
+    }
+
+    .filter-buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .fact-filter-btn {
+        width: 100%;
+    }
+
+    .health-fact-card {
+        padding: 22px;
+    }
+
+    .health-fact-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .fact-card-footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .facts-information-box {
+        padding: 22px;
+    }
+
+}
+/* =========================================================
+   ADMIN LOGIN RESPONSIVE
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .admin-login-page {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-login-brand {
+        min-height: auto;
+
+        padding: 45px 35px;
+    }
+
+    .admin-login-brand-inner {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .admin-login-logo {
+        margin-bottom: 50px;
+    }
+
+    .admin-login-brand-content h1 {
+        font-size: 3.2rem;
+    }
+
+    .admin-login-brand-note {
+        margin-top: 40px;
+    }
+
+    .admin-login-panel {
+        min-height: auto;
+
+        padding: 60px 35px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .admin-login-brand {
+        padding: 35px 22px;
+    }
+
+    .admin-login-logo {
+        margin-bottom: 40px;
+    }
+
+    .admin-login-logo img {
+        max-width: 150px;
+        max-height: 65px;
+    }
+
+    .admin-login-brand-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .admin-login-brand-content p {
+        font-size: 0.9rem;
+    }
+
+    .admin-login-brand-note {
+        margin-top: 35px;
+    }
+
+    .admin-login-panel {
+        padding: 45px 22px;
+    }
+
+    .admin-login-header h2 {
+        font-size: 2rem;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .admin-login-brand-content h1 {
+        font-size: 2.15rem;
+    }
+
+    .admin-login-panel {
+        padding: 35px 17px;
+    }
+
+    .password-label-row {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 3px;
+    }
+
+}

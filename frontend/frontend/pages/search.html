@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Search | MenCare Health Hub</title>
+
+    <meta
+        name="description"
+        content="Search MenCare Health Hub for men's health conditions, symptoms, healthcare facilities, health facts, and myth versus fact information."
+    >
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+    <header class="site-header">
+
+        <div class="container header-inner">
+
+            <!-- Brand -->
+            <a
+                href="../index.html"
+                class="brand"
+                aria-label="MenCare Health Hub Home"
+            >
+                <div class="brand-logo">
+                    <img
+                        src="/frontend/assets/icons/image.png"
+                        alt="MenCare Health Hub Logo"
+                    >
+                </div>
+
+                <div class="brand-text">
+                    <span class="brand-name">MenCare</span>
+                    <span class="brand-subtitle">Health Hub</span>
+                </div>
+            </a>
+
+
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav" aria-label="Main navigation">
+
+                <a href="../index.html">Home</a>
+
+                <a href="health-topics.html">
+                    Health Topics
+                </a>
+
+                <a href="symptoms.html">
+                    Symptoms
+                </a>
+
+                <a href="healthcare.html">
+                    Healthcare
+                </a>
+
+                <a
+                    href="search.html"
+                    class="active"
+                    aria-current="page"
+                >
+                    Search
+                </a>
+
+            </nav>
+
+
+            <!-- Mobile Menu Button -->
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="mobileNav"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+
+        <!-- Mobile Navigation -->
+        <nav
+            class="mobile-nav"
+            id="mobileNav"
+            aria-label="Mobile navigation"
+        >
+
+            <a href="../index.html">Home</a>
+
+            <a href="health-topics.html">
+                Health Topics
+            </a>
+
+            <a href="symptoms.html">
+                Symptoms
+            </a>
+
+            <a href="healthcare.html">
+                Healthcare
+            </a>
+
+            <a
+                href="search.html"
+                class="active"
+                aria-current="page"
+            >
+                Search
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- =========================================
+             SEARCH HERO
+        ========================================== -->
+        <section class="search-hero">
+
+            <div class="container search-hero-inner">
+
+                <span class="section-eyebrow">
+                    FIND HEALTH INFORMATION
+                </span>
+
+                <h1>
+                    Search MenCare Health Hub.
+                </h1>
+
+                <p>
+                    Find information about health conditions, symptoms,
+                    healthcare facilities, health facts, and common
+                    health myths.
+                </p>
+
+                <!-- Search Form -->
+                <form
+                    class="search-form"
+                    id="searchForm"
+                    role="search"
+                >
+
+                    <label
+                        for="searchInput"
+                        class="sr-only"
+                    >
+                        Search MenCare Health Hub
+                    </label>
+
+                    <div class="search-input-wrapper">
+
+                        <span
+                            class="search-icon"
+                            aria-hidden="true"
+                        >
+                            ⌕
+                        </span>
+
+                        <input
+                            type="search"
+                            id="searchInput"
+                            name="search"
+                            placeholder="Search conditions, symptoms, facilities..."
+                            autocomplete="off"
+                        >
+
+                        <button
+                            type="button"
+                            class="clear-search"
+                            id="clearSearch"
+                            aria-label="Clear search"
+                            hidden
+                        >
+                            ×
+                        </button>
+
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary search-submit"
+                    >
+                        Search
+                    </button>
+
+                </form>
+
+                <p class="search-helper">
+                    Try searching for
+                    <button
+                        type="button"
+                        class="suggestion-link"
+                        data-search="BPH"
+                    >
+                        BPH
+                    </button>,
+                    <button
+                        type="button"
+                        class="suggestion-link"
+                        data-search="painful urination"
+                    >
+                        painful urination
+                    </button>,
+                    <button
+                        type="button"
+                        class="suggestion-link"
+                        data-search="chlamydia"
+                    >
+                        chlamydia
+                    </button>
+                    or
+                    <button
+                        type="button"
+                        class="suggestion-link"
+                        data-search="urology"
+                    >
+                        urology
+                    </button>.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             SEARCH CONTENT
+        ========================================== -->
+        <section class="search-results-section">
+
+            <div class="container">
+
+                <!-- Results Header -->
+                <div
+                    class="results-header"
+                    id="resultsHeader"
+                    hidden
+                >
+
+                    <div>
+                        <span class="section-eyebrow">
+                            SEARCH RESULTS
+                        </span>
+
+                        <h2 id="resultsTitle">
+                            Results
+                        </h2>
+                    </div>
+
+                    <span
+                        class="results-count"
+                        id="resultsCount"
+                    >
+                        0 results
+                    </span>
+
+                </div>
+
+
+                <!-- Result Category Filters -->
+                <div
+                    class="result-filters"
+                    id="resultFilters"
+                    hidden
+                >
+
+                    <button
+                        class="result-filter active"
+                        type="button"
+                        data-filter="all"
+                    >
+                        All
+                    </button>
+
+                    <button
+                        class="result-filter"
+                        type="button"
+                        data-filter="condition"
+                    >
+                        Conditions
+                    </button>
+
+                    <button
+                        class="result-filter"
+                        type="button"
+                        data-filter="symptom"
+                    >
+                        Symptoms
+                    </button>
+
+                    <button
+                        class="result-filter"
+                        type="button"
+                        data-filter="facility"
+                    >
+                        Healthcare
+                    </button>
+
+                    <button
+                        class="result-filter"
+                        type="button"
+                        data-filter="fact"
+                    >
+                        Health Facts
+                    </button>
+
+                    <button
+                        class="result-filter"
+                        type="button"
+                        data-filter="myth"
+                    >
+                        Myth vs Fact
+                    </button>
+
+                </div>
+
+
+                <!-- =====================================
+                     LOADING STATE
+                ====================================== -->
+                <div
+                    class="search-state loading-state"
+                    id="loadingState"
+                    hidden
+                >
+
+                    <div class="loading-spinner"></div>
+
+                    <h3>
+                        Searching MenCare...
+                    </h3>
+
+                    <p>
+                        Looking across health information
+                        and healthcare resources.
+                    </p>
+
+                </div>
+
+
+                <!-- =====================================
+                     RESULTS
+                ====================================== -->
+                <div
+                    class="search-results-grid"
+                    id="searchResults"
+                >
+                    <!-- Results inserted by JavaScript -->
+                </div>
+
+
+                <!-- =====================================
+                     EMPTY RESULT STATE
+                ====================================== -->
+                <div
+                    class="search-state empty-state"
+                    id="emptyState"
+                    hidden
+                >
+
+                    <div class="state-icon">
+                        ⌕
+                    </div>
+
+                    <h3>
+                        No results found
+                    </h3>
+
+                    <p id="emptyMessage">
+                        We couldn't find information matching your search.
+                        Try using a different word or phrase.
+                    </p>
+
+                    <div class="empty-suggestions">
+
+                        <span>Try:</span>
+
+                        <button
+                            type="button"
+                            class="suggestion-link"
+                            data-search="prostate"
+                        >
+                            prostate
+                        </button>
+
+                        <button
+                            type="button"
+                            class="suggestion-link"
+                            data-search="urination"
+                        >
+                            urination
+                        </button>
+
+                        <button
+                            type="button"
+                            class="suggestion-link"
+                            data-search="STI"
+                        >
+                            STI
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =====================================
+                     INITIAL STATE
+                ====================================== -->
+                <div
+                    class="search-state initial-state"
+                    id="initialState"
+                >
+
+                    <div class="state-icon initial-icon">
+                        ⌕
+                    </div>
+
+                    <h3>
+                        What are you looking for?
+                    </h3>
+
+                    <p>
+                        Search MenCare Health Hub to explore
+                        information about men's urological and
+                        reproductive health.
+                    </p>
+
+                    <div class="search-categories">
+
+                        <div class="search-category-item">
+                            <span class="category-dot prostate-dot"></span>
+                            <span>Conditions</span>
+                        </div>
+
+                        <div class="search-category-item">
+                            <span class="category-dot urinary-dot"></span>
+                            <span>Symptoms</span>
+                        </div>
+
+                        <div class="search-category-item">
+                            <span class="category-dot sti-dot"></span>
+                            <span>Sexual Health</span>
+                        </div>
+
+                        <div class="search-category-item">
+                            <span class="category-dot healthcare-dot"></span>
+                            <span>Healthcare Facilities</span>
+                        </div>
+
+                        <div class="search-category-item">
+                            <span class="category-dot fact-dot"></span>
+                            <span>Health Facts</span>
+                        </div>
+
+                        <div class="search-category-item">
+                            <span class="category-dot myth-dot"></span>
+                            <span>Myth vs Fact</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             INFORMATION NOTE
+        ========================================== -->
+        <section class="search-note-section">
+
+            <div class="container">
+
+                <div class="search-note">
+
+                    <div class="search-note-icon">
+                        i
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Remember
+                        </h3>
+
+                        <p>
+                            Search results provide educational
+                            information and healthcare navigation.
+                            They do not provide a diagnosis or replace
+                            advice from a qualified healthcare professional.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+    <footer class="site-footer">
+
+        <div class="container footer-grid">
+
+            <div class="footer-brand">
+
+                <a
+                    href="../index.html"
+                    class="footer-logo"
+                >
+
+                    <img
+                        src="/assets/logos/enscare logo.png"
+                        alt="MenCare Health Hub Logo"
+                    >
+
+                    <div>
+                        <strong>MenCare</strong>
+                        <span>Health Hub</span>
+                    </div>
+
+                </a>
+
+                <p>
+                    Men's health information made clearer
+                    and easier to understand.
+                </p>
+
+                <span class="footer-tagline">
+                    Learn. Understand. Take Care of Your Health.
+                </span>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h4>Explore</h4>
+
+                <a href="health-topics.html">
+                    Health Topics
+                </a>
+
+                <a href="symptoms.html">
+                    Symptoms
+                </a>
+
+                <a href="health-facts.html">
+                    Health Facts
+                </a>
+
+                <a href="myth-fact.html">
+                    Myth vs Fact
+                </a>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h4>Healthcare</h4>
+
+                <a href="healthcare.html">
+                    Find Healthcare
+                </a>
+
+                <a href="healthcare.html">
+                    Facilities
+                </a>
+
+                <a href="about.html">
+                    About MenCare
+                </a>
+
+                <a href="privacy.html">
+                    Privacy
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="container footer-bottom">
+
+            <p>
+                © 2026 MenCare Health Hub.
+                Educational information only.
+            </p>
+
+            <a href="admin-login.html">
+                Admin
+            </a>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Main JavaScript -->
+    <script src="../js/main.js"></script>
+
+    <!-- Search JavaScript -->
+    <script src="../js/search.js"></script>
+
+</body>
+</html>
