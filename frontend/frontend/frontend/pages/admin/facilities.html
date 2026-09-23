@@ -1,0 +1,1615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="MenCare Health Hub - Manage Healthcare Facilities"
+    >
+
+    <title>Healthcare Facilities | MenCare Admin</title>
+
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         MENCARE CSS
+    ====================================================== -->
+
+    <link rel="stylesheet" href="/frontend/css/admin.css">
+    <link rel="stylesheet" href="/frontend/css/responsive.css">
+    <link rel="stylesheet" href="/frontend/css/animations.css">
+
+</head>
+
+
+<body class="admin-body">
+
+<div class="admin-app">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside
+        class="admin-sidebar"
+        id="adminSidebar"
+    >
+
+        <!-- Brand -->
+
+        <div class="admin-brand">
+
+            <a
+                href="dashboard.html"
+                class="admin-brand-link"
+            >
+
+                <img
+                    src="/frontend/assets/icons/image.png"
+                    alt="MenCare Health Hub Logo"
+                >
+
+                <div>
+
+                    <strong>
+                        MenCare
+                    </strong>
+
+                    <span>
+                        Health Hub
+                    </span>
+
+                </div>
+
+            </a>
+
+        </div>
+
+
+        <!-- Administrator -->
+
+        <div class="admin-profile">
+
+            <div class="admin-avatar">
+                A
+            </div>
+
+            <div class="admin-profile-info">
+
+                <strong>
+                    Administrator
+                </strong>
+
+                <span>
+                    Content Manager
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Navigation -->
+
+        <nav
+            class="admin-nav"
+            aria-label="Admin navigation"
+        >
+
+            <p class="admin-nav-label">
+                MAIN
+            </p>
+
+
+            <a href="dashboard.html">
+
+                <span class="admin-nav-icon">
+                    ⌂
+                </span>
+
+                <span>
+                    Overview
+                </span>
+
+            </a>
+
+
+            <a href="categories.html">
+
+                <span class="admin-nav-icon">
+                    ▦
+                </span>
+
+                <span>
+                    Categories
+                </span>
+
+            </a>
+
+
+            <a href="conditions.html">
+
+                <span class="admin-nav-icon">
+                    ✚
+                </span>
+
+                <span>
+                    Conditions
+                </span>
+
+            </a>
+
+
+            <a href="symptoms.html">
+
+                <span class="admin-nav-icon">
+                    ◉
+                </span>
+
+                <span>
+                    Symptoms
+                </span>
+
+            </a>
+
+
+            <p class="admin-nav-label">
+                CONTENT
+            </p>
+
+
+            <a
+                href="facilities.html"
+                class="active"
+            >
+
+                <span class="admin-nav-icon">
+                    ⌂
+                </span>
+
+                <span>
+                    Healthcare Facilities
+                </span>
+
+            </a>
+
+
+            <a href="health-facts.html">
+
+                <span class="admin-nav-icon">
+                    !
+                </span>
+
+                <span>
+                    Health Facts
+                </span>
+
+            </a>
+
+
+            <a href="myth-facts.html">
+
+                <span class="admin-nav-icon">
+                    ?
+                </span>
+
+                <span>
+                    Myth vs Fact
+                </span>
+
+            </a>
+
+
+            <p class="admin-nav-label">
+                SYSTEM
+            </p>
+
+
+            <a
+                href="../index.html"
+                target="_blank"
+            >
+
+                <span class="admin-nav-icon">
+                    ↗
+                </span>
+
+                <span>
+                    View Website
+                </span>
+
+            </a>
+
+
+            <a href="settings.html">
+
+                <span class="admin-nav-icon">
+                    ⚙
+                </span>
+
+                <span>
+                    Settings
+                </span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- Logout -->
+
+        <div class="admin-sidebar-footer">
+
+            <button
+                type="button"
+                class="admin-logout-btn"
+                id="logoutBtn"
+            >
+
+                <span>
+                    ↪
+                </span>
+
+                <span>
+                    Logout
+                </span>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="admin-main">
+
+
+        <!-- =================================================
+             TOPBAR
+        ================================================== -->
+
+        <header class="admin-topbar">
+
+            <button
+                type="button"
+                class="admin-menu-toggle"
+                id="adminMenuToggle"
+                aria-label="Open admin navigation"
+                aria-expanded="false"
+            >
+                ☰
+            </button>
+
+
+            <div class="admin-topbar-title">
+
+                <span>
+                    Healthcare Facilities
+                </span>
+
+            </div>
+
+
+            <div class="admin-date">
+
+                <span id="adminDate"></span>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             CONTENT
+        ================================================== -->
+
+        <div class="admin-content">
+
+
+            <!-- PAGE HEADER -->
+
+            <section class="management-header">
+
+                <div>
+
+                    <p class="admin-eyebrow">
+                        HEALTHCARE DIRECTORY
+                    </p>
+
+                    <h1>
+                        Manage Healthcare Facilities
+                    </h1>
+
+                    <p>
+                        Add, update and manage healthcare facilities
+                        available through the MenCare Health Hub directory.
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="admin-btn admin-btn-primary"
+                    id="addFacilityBtn"
+                >
+
+                    <span>
+                        +
+                    </span>
+
+                    Add Facility
+
+                </button>
+
+            </section>
+
+
+            <!-- =================================================
+                 STATISTICS
+            ================================================== -->
+
+            <section class="admin-stats-grid">
+
+
+                <article class="admin-stat-card">
+
+                    <div class="admin-stat-icon">
+                        +
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Total Facilities
+                        </span>
+
+                        <strong id="totalFacilities">
+                            0
+                        </strong>
+
+                    </div>
+
+                </article>
+
+
+                <article class="admin-stat-card">
+
+                    <div class="admin-stat-icon prostate">
+                        U
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Urology Services
+                        </span>
+
+                        <strong id="urologyFacilities">
+                            0
+                        </strong>
+
+                    </div>
+
+                </article>
+
+
+                <article class="admin-stat-card">
+
+                    <div class="admin-stat-icon sti">
+                        S
+                    </div>
+
+                    <div>
+
+                        <span>
+                            STI Services
+                        </span>
+
+                        <strong id="stiFacilities">
+                            0
+                        </strong>
+
+                    </div>
+
+                </article>
+
+
+                <article class="admin-stat-card">
+
+                    <div class="admin-stat-icon urinary">
+                        G
+                    </div>
+
+                    <div>
+
+                        <span>
+                            General Medical
+                        </span>
+
+                        <strong id="generalFacilities">
+                            0
+                        </strong>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+
+            <!-- =================================================
+                 FACILITIES PANEL
+            ================================================== -->
+
+            <section class="admin-panel">
+
+
+                <!-- SEARCH HEADER -->
+
+                <div class="admin-search-header">
+
+                    <div>
+
+                        <h2>
+                            Healthcare Facilities
+                        </h2>
+
+                        <p>
+                            Browse and manage facilities in the directory.
+                        </p>
+
+                    </div>
+
+
+                    <div class="admin-search-tools">
+
+
+                        <!-- Search -->
+
+                        <div class="admin-search-box">
+
+                            <span>
+                                ⌕
+                            </span>
+
+                            <input
+                                type="search"
+                                id="facilitySearch"
+                                placeholder="Search facilities..."
+                                aria-label="Search facilities"
+                            >
+
+                        </div>
+
+
+                        <!-- County -->
+
+                        <select
+                            id="facilityCountyFilter"
+                            class="admin-select"
+                            aria-label="Filter by county"
+                        >
+
+                            <option value="all">
+                                All Counties
+                            </option>
+
+                            <option value="nyeri">
+                                Nyeri
+                            </option>
+
+                            <option value="nairobi">
+                                Nairobi
+                            </option>
+
+                            <option value="muranga">
+                                Murang'a
+                            </option>
+
+                            <option value="kiambu">
+                                Kiambu
+                            </option>
+
+                            <option value="other">
+                                Other
+                            </option>
+
+                        </select>
+
+
+                        <!-- Service -->
+
+                        <select
+                            id="facilityServiceFilter"
+                            class="admin-select"
+                            aria-label="Filter by service"
+                        >
+
+                            <option value="all">
+                                All Services
+                            </option>
+
+                            <option value="urology">
+                                Urology
+                            </option>
+
+                            <option value="sti">
+                                STI Testing & Care
+                            </option>
+
+                            <option value="general">
+                                General Medical
+                            </option>
+
+                            <option value="sexual">
+                                Sexual & Reproductive Health
+                            </option>
+
+                        </select>
+
+
+                        <button
+                            type="button"
+                            class="admin-btn admin-btn-secondary"
+                            id="clearFacilityFilters"
+                        >
+                            Clear
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     TABLE
+                ================================================== -->
+
+                <div class="admin-table-wrapper">
+
+                    <table class="admin-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Facility
+                                </th>
+
+                                <th>
+                                    Location
+                                </th>
+
+                                <th>
+                                    Services
+                                </th>
+
+                                <th>
+                                    Contact
+                                </th>
+
+                                <th>
+                                    Status
+                                </th>
+
+                                <th>
+                                    Actions
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="facilityTableBody">
+
+
+                            <!-- =================================================
+                                 FACILITY 1
+                            ================================================== -->
+
+                            <tr
+                                class="facility-row"
+                                data-id="nyeri-referral"
+                                data-name="Nyeri County Referral Hospital"
+                                data-county="nyeri"
+                                data-town="Nyeri"
+                                data-type="public"
+                                data-services="general,urology,sti,sexual"
+                                data-description="A public healthcare facility providing a range of medical services."
+                                data-address="Nyeri Town, Nyeri County, Kenya"
+                                data-phone="+254 000 000 000"
+                                data-email="info@example.com"
+                                data-status="active"
+                            >
+
+                                <td>
+
+                                    <div class="condition-name-cell">
+
+                                        <div class="condition-mini-icon prostate">
+                                            H
+                                        </div>
+
+                                        <div>
+
+                                            <strong>
+                                                Nyeri County Referral Hospital
+                                            </strong>
+
+                                            <span>
+                                                Public Hospital
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+
+                                    <span>
+                                        Nyeri, Kenya
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <span class="category-badge prostate">
+                                        4 Services
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <span>
+                                        +254 000 000 000
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <span class="status-badge published">
+                                        Active
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="table-actions">
+
+                                        <button
+                                            type="button"
+                                            class="table-action view-facility-btn"
+                                        >
+                                            View
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="table-action edit-facility-btn"
+                                        >
+                                            Edit
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="table-action danger delete-facility-btn"
+                                        >
+                                            Delete
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+                            <!-- =================================================
+                                 FACILITY 2
+                            ================================================== -->
+
+                            <tr
+                                class="facility-row"
+                                data-id="dekut-health"
+                                data-name="DeKUT Health Services"
+                                data-county="nyeri"
+                                data-town="nyeri"
+                                data-type="institutional"
+                                data-services="general,sexual"
+                                data-description="Healthcare services available within the university environment."
+                                data-address="Dedan Kimathi University of Technology, Nyeri County"
+                                data-phone="+254 000 000 001"
+                                data-email="health@example.com"
+                                data-status="active"
+                            >
+
+                                <td>
+
+                                    <div class="condition-name-cell">
+
+                                        <div class="condition-mini-icon urinary">
+                                            H
+                                        </div>
+
+                                        <div>
+
+                                            <strong>
+                                                DeKUT Health Services
+                                            </strong>
+
+                                            <span>
+                                                Institutional Facility
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+
+                                    <span>
+                                        Nyeri, Kenya
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <span class="category-badge urinary">
+                                        2 Services
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <span>
+                                        +254 000 000 001
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <span class="status-badge published">
+                                        Active
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="table-actions">
+
+                                        <button
+                                            type="button"
+                                            class="table-action view-facility-btn"
+                                        >
+                                            View
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="table-action edit-facility-btn"
+                                        >
+                                            Edit
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="table-action danger delete-facility-btn"
+                                        >
+                                            Delete
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <!-- EMPTY STATE -->
+
+                <div
+                    class="admin-empty-state"
+                    id="emptyFacilityState"
+                    hidden
+                >
+
+                    <div class="empty-state-icon">
+                        ⌕
+                    </div>
+
+                    <h3>
+                        No facilities found
+                    </h3>
+
+                    <p>
+                        Try another search term or filter.
+                    </p>
+
+                    <button
+                        type="button"
+                        class="admin-btn admin-btn-secondary"
+                        id="resetFacilityFilters"
+                    >
+                        Reset Filters
+                    </button>
+
+                </div>
+
+
+                <!-- TABLE FOOTER -->
+
+                <div class="admin-table-footer">
+
+                    <span>
+
+                        Showing
+
+                        <strong id="showingFacilities">
+                            2
+                        </strong>
+
+                        facilities
+
+                    </span>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 QUALITY NOTICE
+            ================================================== -->
+
+            <section class="admin-notice">
+
+                <div class="admin-notice-icon">
+                    !
+                </div>
+
+                <div>
+
+                    <h3>
+                        Keep facility information accurate
+                    </h3>
+
+                    <p>
+                        Verify facility names, locations, contact
+                        information, services and availability before
+                        publishing them to the public directory.
+                    </p>
+
+                </div>
+
+            </section>
+
+        </div>
+
+
+        <!-- =================================================
+             FOOTER
+        ================================================== -->
+
+        <footer class="admin-footer">
+
+            <p>
+
+                ©
+
+                <span id="adminFooterYear"></span>
+
+                MenCare Health Hub.
+                Admin Panel.
+
+            </p>
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<!-- =========================================================
+     ADD / EDIT FACILITY MODAL
+========================================================= -->
+
+<div
+    class="admin-modal"
+    id="facilityModal"
+    aria-hidden="true"
+>
+
+    <div class="admin-modal-overlay"></div>
+
+
+    <div
+        class="admin-modal-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="facilityModalTitle"
+    >
+
+
+        <!-- Modal Header -->
+
+        <div class="admin-modal-header">
+
+            <div>
+
+                <p class="admin-eyebrow">
+                    HEALTHCARE DIRECTORY
+                </p>
+
+                <h2 id="facilityModalTitle">
+                    Add Facility
+                </h2>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="modal-close"
+                id="closeFacilityModal"
+                aria-label="Close modal"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <!-- Form -->
+
+        <form id="facilityForm">
+
+            <input
+                type="hidden"
+                id="facilityId"
+            >
+
+
+            <div class="admin-form-grid">
+
+
+                <!-- Facility Name -->
+
+                <div class="admin-form-group">
+
+                    <label for="facilityName">
+
+                        Facility Name
+
+                        <span>
+                            *
+                        </span>
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="facilityName"
+                        placeholder="e.g. Nyeri County Referral Hospital"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Facility Type -->
+
+                <div class="admin-form-group">
+
+                    <label for="facilityType">
+
+                        Facility Type
+
+                        <span>
+                            *
+                        </span>
+
+                    </label>
+
+                    <select
+                        id="facilityType"
+                        required
+                    >
+
+                        <option value="">
+                            Select facility type
+                        </option>
+
+                        <option value="public">
+                            Public Hospital
+                        </option>
+
+                        <option value="private">
+                            Private Hospital
+                        </option>
+
+                        <option value="clinic">
+                            Clinic
+                        </option>
+
+                        <option value="institutional">
+                            Institutional Facility
+                        </option>
+
+                        <option value="specialist">
+                            Specialist Centre
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- County -->
+
+                <div class="admin-form-group">
+
+                    <label for="facilityCounty">
+
+                        County
+
+                        <span>
+                            *
+                        </span>
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="facilityCounty"
+                        placeholder="e.g. Nyeri"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Town -->
+
+                <div class="admin-form-group">
+
+                    <label for="facilityTown">
+
+                        Town / City
+
+                        <span>
+                            *
+                        </span>
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="facilityTown"
+                        placeholder="e.g. Nyeri Town"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Address -->
+
+                <div class="admin-form-group full-width">
+
+                    <label for="facilityAddress">
+
+                        Address
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="facilityAddress"
+                        placeholder="Full facility address"
+                    >
+
+                </div>
+
+
+                <!-- Description -->
+
+                <div class="admin-form-group full-width">
+
+                    <label for="facilityDescription">
+
+                        Description
+
+                        <span>
+                            *
+                        </span>
+
+                    </label>
+
+                    <textarea
+                        id="facilityDescription"
+                        rows="4"
+                        placeholder="Write a short description of the facility..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <!-- Services -->
+
+                <div class="admin-form-group full-width">
+
+                    <label>
+
+                        Healthcare Services
+
+                    </label>
+
+
+                    <div class="facility-service-options">
+
+
+                        <label class="facility-checkbox">
+
+                            <input
+                                type="checkbox"
+                                name="facilityServices"
+                                value="general"
+                            >
+
+                            <span>
+                                General Medical Services
+                            </span>
+
+                        </label>
+
+
+                        <label class="facility-checkbox">
+
+                            <input
+                                type="checkbox"
+                                name="facilityServices"
+                                value="urology"
+                            >
+
+                            <span>
+                                Urology Services
+                            </span>
+
+                        </label>
+
+
+                        <label class="facility-checkbox">
+
+                            <input
+                                type="checkbox"
+                                name="facilityServices"
+                                value="sti"
+                            >
+
+                            <span>
+                                STI Testing & Care
+                            </span>
+
+                        </label>
+
+
+                        <label class="facility-checkbox">
+
+                            <input
+                                type="checkbox"
+                                name="facilityServices"
+                                value="sexual"
+                            >
+
+                            <span>
+                                Sexual & Reproductive Health
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Phone -->
+
+                <div class="admin-form-group">
+
+                    <label for="facilityPhone">
+                        Phone
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="facilityPhone"
+                        placeholder="+254..."
+                    >
+
+                </div>
+
+
+                <!-- Email -->
+
+                <div class="admin-form-group">
+
+                    <label for="facilityEmail">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="facilityEmail"
+                        placeholder="facility@example.com"
+                    >
+
+                </div>
+
+
+                <!-- Website -->
+
+                <div class="admin-form-group">
+
+                    <label for="facilityWebsite">
+                        Website
+                    </label>
+
+                    <input
+                        type="url"
+                        id="facilityWebsite"
+                        placeholder="https://example.com"
+                    >
+
+                </div>
+
+
+                <!-- Opening Hours -->
+
+                <div class="admin-form-group">
+
+                    <label for="facilityHours">
+                        Opening Hours
+                    </label>
+
+                    <input
+                        type="text"
+                        id="facilityHours"
+                        placeholder="e.g. Mon - Fri, 8:00 AM - 5:00 PM"
+                    >
+
+                </div>
+
+
+                <!-- Directions -->
+
+                <div class="admin-form-group full-width">
+
+                    <label for="facilityDirections">
+                        Directions Link
+                    </label>
+
+                    <input
+                        type="url"
+                        id="facilityDirections"
+                        placeholder="Google Maps directions URL"
+                    >
+
+                </div>
+
+
+                <!-- Status -->
+
+                <div class="admin-form-group">
+
+                    <label for="facilityStatus">
+                        Status
+                    </label>
+
+                    <select id="facilityStatus">
+
+                        <option value="active">
+                            Active
+                        </option>
+
+                        <option value="draft">
+                            Draft
+                        </option>
+
+                        <option value="inactive">
+                            Inactive
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- Actions -->
+
+            <div class="admin-modal-actions">
+
+                <button
+                    type="button"
+                    class="admin-btn admin-btn-secondary"
+                    id="cancelFacilityBtn"
+                >
+                    Cancel
+                </button>
+
+
+                <button
+                    type="submit"
+                    class="admin-btn admin-btn-primary"
+                    id="saveFacilityBtn"
+                >
+                    Save Facility
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     VIEW FACILITY MODAL
+========================================================= -->
+
+<div
+    class="admin-modal"
+    id="viewFacilityModal"
+    aria-hidden="true"
+>
+
+    <div class="admin-modal-overlay"></div>
+
+
+    <div
+        class="admin-modal-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="viewFacilityTitle"
+    >
+
+
+        <div class="admin-modal-header">
+
+            <div>
+
+                <p class="admin-eyebrow">
+                    FACILITY DETAILS
+                </p>
+
+                <h2 id="viewFacilityTitle">
+                    Facility
+                </h2>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="modal-close"
+                id="closeViewFacilityModal"
+                aria-label="Close modal"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="condition-view-content">
+
+
+            <!-- Meta -->
+
+            <div class="condition-view-meta">
+
+                <span
+                    class="category-badge prostate"
+                    id="viewFacilityType"
+                >
+                    Public Hospital
+                </span>
+
+                <span
+                    class="status-badge published"
+                    id="viewFacilityStatus"
+                >
+                    Active
+                </span>
+
+            </div>
+
+
+            <!-- Description -->
+
+            <div class="condition-detail-block">
+
+                <h3>
+                    Description
+                </h3>
+
+                <p id="viewFacilityDescription">
+                    —
+                </p>
+
+            </div>
+
+
+            <!-- Location -->
+
+            <div class="condition-detail-block">
+
+                <h3>
+                    Location
+                </h3>
+
+                <p id="viewFacilityLocation">
+                    —
+                </p>
+
+            </div>
+
+
+            <!-- Details -->
+
+            <div class="condition-info-grid">
+
+
+                <div class="condition-detail-block">
+
+                    <h3>
+                        Services
+                    </h3>
+
+                    <p id="viewFacilityServices">
+                        —
+                    </p>
+
+                </div>
+
+
+                <div class="condition-detail-block">
+
+                    <h3>
+                        Contact
+                    </h3>
+
+                    <p id="viewFacilityContact">
+                        —
+                    </p>
+
+                </div>
+
+
+                <div class="condition-detail-block">
+
+                    <h3>
+                        Opening Hours
+                    </h3>
+
+                    <p id="viewFacilityHours">
+                        —
+                    </p>
+
+                </div>
+
+
+                <div class="condition-detail-block">
+
+                    <h3>
+                        Website
+                    </h3>
+
+                    <p id="viewFacilityWebsite">
+                        —
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="admin-modal-actions">
+
+            <button
+                type="button"
+                class="admin-btn admin-btn-secondary"
+                id="closeViewFacilityBtn"
+            >
+                Close
+            </button>
+
+
+            <button
+                type="button"
+                class="admin-btn admin-btn-primary"
+                id="editViewedFacilityBtn"
+            >
+                Edit Facility
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script src="/frontend/frontend/js/admin/facilities.js"></script>
+<script src="/frontend/js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Healthcare Facility | MenCare Health Hub</title>
+
+    <meta
+        name="description"
+        content="View healthcare facility information, services, location and contact details through MenCare Health Hub."
+    >
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Main Public CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <!-- Animation CSS -->
+    <link rel="stylesheet" href="../css/animations.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+    <header class="site-header">
+
+        <div class="container header-container">
+
+            <!-- Logo -->
+            <a href="../index.html" class="site-logo">
+
+                <img
+                    src="/assets/logos/enscare logo.png"
+                    alt="MenCare Health Hub Logo"
+                >
+
+                <div class="logo-text">
+                    <strong>MenCare</strong>
+                    <span>Health Hub</span>
+                </div>
+
+            </a>
+
+
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav" aria-label="Main navigation">
+
+                <a href="../index.html">Home</a>
+
+                <a href="health-topics.html">
+                    Health Topics
+                </a>
+
+                <a href="symptoms.html">
+                    Symptoms
+                </a>
+
+                <a href="healthcare.html" class="active">
+                    Healthcare
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+            </nav>
+
+
+            <!-- Mobile Menu Button -->
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+
+        <!-- Mobile Navigation -->
+        <nav
+            class="mobile-nav"
+            id="mobileNav"
+            aria-label="Mobile navigation"
+        >
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="health-topics.html">
+                Health Topics
+            </a>
+
+            <a href="symptoms.html">
+                Symptoms
+            </a>
+
+            <a href="healthcare.html" class="active">
+                Healthcare
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+    <main class="facility-page">
+
+        <!-- Breadcrumb -->
+        <section class="breadcrumb-section">
+
+            <div class="container">
+
+                <nav
+                    class="breadcrumb"
+                    aria-label="Breadcrumb"
+                >
+
+                    <a href="../index.html">
+                        Home
+                    </a>
+
+                    <span>/</span>
+
+                    <a href="healthcare.html">
+                        Healthcare Services
+                    </a>
+
+                    <span>/</span>
+
+                    <span id="breadcrumbFacility">
+                        Facility
+                    </span>
+
+                </nav>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FACILITY HERO
+        ========================== -->
+        <section class="facility-hero">
+
+            <div class="container">
+
+                <div class="facility-hero-grid">
+
+                    <!-- Facility Information -->
+                    <div class="facility-main-info">
+
+                        <span
+                            class="facility-label"
+                            id="facilityType"
+                        >
+                            HEALTHCARE FACILITY
+                        </span>
+
+
+                        <h1 id="facilityName">
+                            Nyeri County Referral Hospital
+                        </h1>
+
+
+                        <p
+                            class="facility-description"
+                            id="facilityDescription"
+                        >
+                            A healthcare facility providing general
+                            medical services and specialist care for
+                            patients in the surrounding community.
+                        </p>
+
+
+                        <!-- Location -->
+                        <div class="facility-location">
+
+                            <span class="facility-icon">
+                                <i>⌖</i>
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Location
+                                </strong>
+
+                                <p id="facilityLocation">
+                                    Nyeri, Nyeri County, Kenya
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Save Facility -->
+                        <button
+                            class="facility-save-btn"
+                            id="saveFacilityBtn"
+                            type="button"
+                        >
+
+                            <span class="save-icon">
+                                ♡
+                            </span>
+
+                            <span class="save-text">
+                                Save Facility
+                            </span>
+
+                        </button>
+
+                    </div>
+
+
+                    <!-- Facility Visual -->
+                    <div class="facility-visual">
+
+                        <div class="facility-visual-card">
+
+                            <div class="facility-visual-icon">
+                                +
+                            </div>
+
+                            <span>
+                                Healthcare Services
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FACILITY DETAILS
+        ========================== -->
+        <section class="facility-details-section">
+
+            <div class="container">
+
+                <div class="facility-details-grid">
+
+                    <!-- Services -->
+                    <article class="facility-info-card">
+
+                        <div class="facility-card-heading">
+
+                            <span class="card-icon">
+                                ✓
+                            </span>
+
+                            <div>
+
+                                <span class="card-eyebrow">
+                                    AVAILABLE SERVICES
+                                </span>
+
+                                <h2>
+                                    Healthcare Services
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            class="facility-services"
+                            id="facilityServices"
+                        >
+
+                            <span class="service-tag">
+                                General Medical Services
+                            </span>
+
+                            <span class="service-tag">
+                                Urology Services
+                            </span>
+
+                            <span class="service-tag">
+                                STI Testing & Care
+                            </span>
+
+                            <span class="service-tag">
+                                Sexual & Reproductive Health
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Contact -->
+                    <article class="facility-info-card">
+
+                        <div class="facility-card-heading">
+
+                            <span class="card-icon">
+                                ☎
+                            </span>
+
+                            <div>
+
+                                <span class="card-eyebrow">
+                                    CONTACT
+                                </span>
+
+                                <h2>
+                                    Contact Information
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="facility-contact-list">
+
+                            <div class="contact-item">
+
+                                <strong>
+                                    Phone
+                                </strong>
+
+                                <a
+                                    href="tel:+254000000000"
+                                    id="facilityPhone"
+                                >
+                                    +254 000 000 000
+                                </a>
+
+                            </div>
+
+
+                            <div class="contact-item">
+
+                                <strong>
+                                    Email
+                                </strong>
+
+                                <a
+                                    href="mailto:info@example.com"
+                                    id="facilityEmail"
+                                >
+                                    info@example.com
+                                </a>
+
+                            </div>
+
+
+                            <div class="contact-item">
+
+                                <strong>
+                                    Address
+                                </strong>
+
+                                <p id="facilityAddress">
+                                    Nyeri, Kenya
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Opening Hours -->
+                    <article class="facility-info-card">
+
+                        <div class="facility-card-heading">
+
+                            <span class="card-icon">
+                                ◷
+                            </span>
+
+                            <div>
+
+                                <span class="card-eyebrow">
+                                    AVAILABILITY
+                                </span>
+
+                                <h2>
+                                    Opening Hours
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            class="facility-hours"
+                            id="facilityHours"
+                        >
+
+                            <div class="hours-row">
+                                <span>Monday – Friday</span>
+                                <strong>8:00 AM – 5:00 PM</strong>
+                            </div>
+
+                            <div class="hours-row">
+                                <span>Saturday</span>
+                                <strong>9:00 AM – 1:00 PM</strong>
+                            </div>
+
+                            <div class="hours-row">
+                                <span>Sunday</span>
+                                <strong>Closed</strong>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Directions -->
+                    <article class="facility-info-card">
+
+                        <div class="facility-card-heading">
+
+                            <span class="card-icon">
+                                →
+                            </span>
+
+                            <div>
+
+                                <span class="card-eyebrow">
+                                    LOCATION
+                                </span>
+
+                                <h2>
+                                    Find the Facility
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+
+                        <p class="directions-text">
+                            Use the facility address to find the
+                            healthcare provider or contact them
+                            directly before visiting.
+                        </p>
+
+
+                        <a
+                            href="#"
+                            class="btn btn-primary facility-directions-btn"
+                            id="directionsBtn"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Get Directions
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             IMPORTANT INFORMATION
+        ========================== -->
+        <section class="facility-notice-section">
+
+            <div class="container">
+
+                <div class="facility-notice">
+
+                    <div class="notice-icon">
+                        !
+                    </div>
+
+                    <div>
+
+                        <span class="notice-label">
+                            BEFORE YOU VISIT
+                        </span>
+
+                        <h2>
+                            Confirm services and availability
+                        </h2>
+
+                        <p>
+                            Healthcare services, opening hours and
+                            availability may change. Contact the
+                            facility directly to confirm the service
+                            you need before visiting.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             HEALTHCARE CTA
+        ========================== -->
+        <section class="healthcare-cta">
+
+            <div class="container">
+
+                <div class="healthcare-cta-content">
+
+                    <span class="section-eyebrow">
+                        NEED PROFESSIONAL HELP?
+                    </span>
+
+                    <h2>
+                        Know when to seek professional care.
+                    </h2>
+
+                    <p>
+                        If you are experiencing symptoms that
+                        concern you, consider speaking with a
+                        qualified healthcare professional.
+                    </p>
+
+
+                    <div class="cta-actions">
+
+                        <a
+                            href="healthcare.html"
+                            class="btn btn-light"
+                        >
+                            Browse Healthcare Facilities
+                        </a>
+
+                        <a
+                            href="symptoms.html"
+                            class="btn btn-outline-light"
+                        >
+                            Explore Symptoms
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer class="site-footer">
+
+        <div class="container footer-container">
+
+            <div class="footer-brand">
+
+                <a
+                    href="../index.html"
+                    class="site-logo footer-logo"
+                >
+
+                    <img
+                        src="/assets/logos/enscare logo.png"
+                        alt="MenCare Health Hub Logo"
+                    >
+
+                    <div class="logo-text">
+                        <strong>MenCare</strong>
+                        <span>Health Hub</span>
+                    </div>
+
+                </a>
+
+                <p>
+                    Men's health information made clearer
+                    and easier to understand.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Explore
+                </h3>
+
+                <a href="health-topics.html">
+                    Health Topics
+                </a>
+
+                <a href="symptoms.html">
+                    Symptoms
+                </a>
+
+                <a href="health-facts.html">
+                    Health Facts
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Healthcare
+                </h3>
+
+                <a href="healthcare.html">
+                    Find Facilities
+                </a>
+
+                <a href="about.html">
+                    About MenCare
+                </a>
+
+                <a href="privacy.html">
+                    Privacy
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <div class="container">
+
+                <p>
+                    © <span id="currentYear"></span>
+                    MenCare Health Hub.
+                    Educational information only.
+                    Not a diagnosis.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+    <script src="../js/facility-card.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Admin Dashboard | MenCare Health Hub</title>
+
+    <meta
+        name="description"
+        content="MenCare Health Hub administrator dashboard for managing health information and healthcare resources."
+    >
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- MenCare CSS -->
+    <link rel="stylesheet" href="/frontend/css/admin.css">
+    <link rel="stylesheet" href="/frontend/css/responsive.css">
+    <link rel="stylesheet" href="/frontend/css/animations.css">
+
+</head>
+
+
+<body class="admin-body">
+
+
+    <!-- =====================================================
+         ADMIN APPLICATION
+    ====================================================== -->
+
+    <div class="admin-app">
+
+
+        <!-- =================================================
+             SIDEBAR
+        ================================================== -->
+
+        <aside
+            class="admin-sidebar"
+            id="adminSidebar"
+        >
+
+            <!-- Logo -->
+            <div class="admin-brand">
+
+                <a
+                    href="../index.html"
+                    class="admin-logo"
+                    aria-label="MenCare Health Hub"
+                >
+
+                    <img
+                        src="/assets/logos/enscare logo.png"
+                        alt="MenCare Health Hub Logo"
+                    >
+
+                </a>
+
+
+                <div class="admin-brand-text">
+
+                    <strong>
+                        MenCare
+                    </strong>
+
+                    <span>
+                        Health Hub
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Administrator -->
+            <div class="admin-profile">
+
+                <div class="admin-avatar">
+                    A
+                </div>
+
+                <div class="admin-profile-info">
+
+                    <strong>
+                        Administrator
+                    </strong>
+
+                    <span>
+                        Content Manager
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Navigation -->
+            <nav
+                class="admin-nav"
+                aria-label="Admin navigation"
+            >
+
+                <span class="admin-nav-label">
+                    DASHBOARD
+                </span>
+
+
+                <a
+                    href="dashboard.html"
+                    class="admin-nav-link active"
+                    aria-current="page"
+                >
+
+                    <span class="admin-nav-icon">
+                        ▦
+                    </span>
+
+                    <span>
+                        Overview
+                    </span>
+
+                </a>
+
+
+                <span class="admin-nav-label">
+                    CONTENT
+                </span>
+
+
+                <a
+                    href="categories.html"
+                    class="admin-nav-link"
+                >
+
+                    <span class="admin-nav-icon">
+                        ◈
+                    </span>
+
+                    <span>
+                        Categories
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="conditions.html"
+                    class="admin-nav-link"
+                >
+
+                    <span class="admin-nav-icon">
+                        +
+                    </span>
+
+                    <span>
+                        Conditions
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="symptoms.html"
+                    class="admin-nav-link"
+                >
+
+                    <span class="admin-nav-icon">
+                        ◌
+                    </span>
+
+                    <span>
+                        Symptoms
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="facilities.html"
+                    class="admin-nav-link"
+                >
+
+                    <span class="admin-nav-icon">
+                        +
+                    </span>
+
+                    <span>
+                        Healthcare Facilities
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="health-facts.html"
+                    class="admin-nav-link"
+                >
+
+                    <span class="admin-nav-icon">
+                        i
+                    </span>
+
+                    <span>
+                        Health Facts
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="myth-facts.html"
+                    class="admin-nav-link"
+                >
+
+                    <span class="admin-nav-icon">
+                        ?
+                    </span>
+
+                    <span>
+                        Myth vs Fact
+                    </span>
+
+                </a>
+
+
+                <span class="admin-nav-label">
+                    PLATFORM
+                </span>
+
+
+                <a
+                    href="../index.html"
+                    class="admin-nav-link"
+                >
+
+                    <span class="admin-nav-icon">
+                        ↗
+                    </span>
+
+                    <span>
+                        View Website
+                    </span>
+
+                </a>
+
+            </nav>
+
+
+            <!-- Sidebar bottom -->
+            <div class="admin-sidebar-bottom">
+
+                <a
+                    href="settings.html"
+                    class="admin-nav-link"
+                >
+
+                    <span class="admin-nav-icon">
+                        ⚙
+                    </span>
+
+                    <span>
+                        Settings
+                    </span>
+
+                </a>
+
+
+                <button
+                    type="button"
+                    class="admin-logout"
+                    id="logoutButton"
+                >
+
+                    <span class="admin-nav-icon">
+                        ↪
+                    </span>
+
+                    <span>
+                        Logout
+                    </span>
+
+                </button>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- =================================================
+             MAIN ADMIN AREA
+        ================================================== -->
+
+        <main class="admin-main">
+
+
+            <!-- =================================================
+                 TOP BAR
+            ================================================== -->
+
+            <header class="admin-topbar">
+
+                <div class="admin-topbar-left">
+
+                    <button
+                        type="button"
+                        class="admin-menu-toggle"
+                        id="adminMenuToggle"
+                        aria-label="Open admin navigation"
+                        aria-expanded="false"
+                        aria-controls="adminSidebar"
+                    >
+                        ☰
+                    </button>
+
+
+                    <div>
+
+                        <span class="admin-page-label">
+                            ADMINISTRATION
+                        </span>
+
+                        <h1>
+                            Dashboard
+                        </h1>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-topbar-actions">
+
+                    <a
+                        href="../index.html"
+                        class="view-site-btn"
+                    >
+                        View Website
+                        <span>↗</span>
+                    </a>
+
+
+                    <div
+                        class="admin-top-avatar"
+                        aria-label="Administrator profile"
+                    >
+                        A
+                    </div>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- =================================================
+                 DASHBOARD CONTENT
+            ================================================== -->
+
+            <div class="admin-content">
+
+
+                <!-- =================================================
+                     WELCOME
+                ================================================== -->
+
+                <section class="admin-welcome">
+
+                    <div class="admin-welcome-content">
+
+                        <span class="admin-eyebrow">
+                            MENCARE HEALTH HUB
+                        </span>
+
+                        <h2>
+                            Welcome back, Administrator.
+                        </h2>
+
+                        <p>
+                            Manage health information, healthcare
+                            resources, and educational content
+                            across the MenCare Health Hub platform.
+                        </p>
+
+                    </div>
+
+
+                    <div class="dashboard-date">
+
+                        <span>
+                            TODAY
+                        </span>
+
+                        <strong id="currentDate">
+                            Loading...
+                        </strong>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+                     STATISTICS
+                ================================================== -->
+
+                <section class="admin-section">
+
+                    <div class="admin-section-heading">
+
+                        <div>
+
+                            <span class="admin-eyebrow">
+                                PLATFORM OVERVIEW
+                            </span>
+
+                            <h2>
+                                Content statistics
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="statistics-grid">
+
+
+                        <!-- Categories -->
+                        <article class="stat-card stat-categories">
+
+                            <div class="stat-card-top">
+
+                                <div class="stat-icon">
+                                    ◈
+                                </div>
+
+                                <span class="stat-label">
+                                    CATEGORIES
+                                </span>
+
+                            </div>
+
+                            <div
+                                class="stat-number"
+                                id="totalCategories"
+                            >
+                                3
+                            </div>
+
+                            <p>
+                                Health information categories
+                            </p>
+
+                        </article>
+
+
+
+                        <!-- Conditions -->
+                        <article class="stat-card stat-conditions">
+
+                            <div class="stat-card-top">
+
+                                <div class="stat-icon">
+                                    +
+                                </div>
+
+                                <span class="stat-label">
+                                    CONDITIONS
+                                </span>
+
+                            </div>
+
+                            <div
+                                class="stat-number"
+                                id="totalConditions"
+                            >
+                                7
+                            </div>
+
+                            <p>
+                                Published health conditions
+                            </p>
+
+                        </article>
+
+
+
+                        <!-- Symptoms -->
+                        <article class="stat-card stat-symptoms">
+
+                            <div class="stat-card-top">
+
+                                <div class="stat-icon">
+                                    ◌
+                                </div>
+
+                                <span class="stat-label">
+                                    SYMPTOMS
+                                </span>
+
+                            </div>
+
+                            <div
+                                class="stat-number"
+                                id="totalSymptoms"
+                            >
+                                6
+                            </div>
+
+                            <p>
+                                Educational symptom information
+                            </p>
+
+                        </article>
+
+
+
+                        <!-- Facilities -->
+                        <article class="stat-card stat-facilities">
+
+                            <div class="stat-card-top">
+
+                                <div class="stat-icon">
+                                    +
+                                </div>
+
+                                <span class="stat-label">
+                                    FACILITIES
+                                </span>
+
+                            </div>
+
+                            <div
+                                class="stat-number"
+                                id="totalFacilities"
+                            >
+                                0
+                            </div>
+
+                            <p>
+                                Healthcare facilities
+                            </p>
+
+                        </article>
+
+
+
+                        <!-- Health Facts -->
+                        <article class="stat-card stat-facts">
+
+                            <div class="stat-card-top">
+
+                                <div class="stat-icon">
+                                    i
+                                </div>
+
+                                <span class="stat-label">
+                                    HEALTH FACTS
+                                </span>
+
+                            </div>
+
+                            <div
+                                class="stat-number"
+                                id="totalHealthFacts"
+                            >
+                                0
+                            </div>
+
+                            <p>
+                                Educational health facts
+                            </p>
+
+                        </article>
+
+
+
+                        <!-- Myths -->
+                        <article class="stat-card stat-myths">
+
+                            <div class="stat-card-top">
+
+                                <div class="stat-icon">
+                                    ?
+                                </div>
+
+                                <span class="stat-label">
+                                    MYTHS
+                                </span>
+
+                            </div>
+
+                            <div
+                                class="stat-number"
+                                id="totalMyths"
+                            >
+                                0
+                            </div>
+
+                            <p>
+                                Myth vs Fact entries
+                            </p>
+
+                        </article>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+                     QUICK ACTIONS
+                ================================================== -->
+
+                <section class="admin-section">
+
+                    <div class="admin-section-heading">
+
+                        <div>
+
+                            <span class="admin-eyebrow">
+                                QUICK ACTIONS
+                            </span>
+
+                            <h2>
+                                Add new content
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="quick-actions-grid">
+
+
+                        <a
+                            href="categories.html?action=add"
+                            class="quick-action"
+                        >
+
+                            <div class="quick-action-icon">
+                                ◈
+                            </div>
+
+                            <div class="quick-action-content">
+
+                                <strong>
+                                    Add Category
+                                </strong>
+
+                                <span>
+                                    Create a health category
+                                </span>
+
+                            </div>
+
+                            <span class="quick-action-arrow">
+                                →
+                            </span>
+
+                        </a>
+
+
+
+                        <a
+                            href="conditions.html?action=add"
+                            class="quick-action"
+                        >
+
+                            <div class="quick-action-icon">
+                                +
+                            </div>
+
+                            <div class="quick-action-content">
+
+                                <strong>
+                                    Add Condition
+                                </strong>
+
+                                <span>
+                                    Add health condition information
+                                </span>
+
+                            </div>
+
+                            <span class="quick-action-arrow">
+                                →
+                            </span>
+
+                        </a>
+
+
+
+                        <a
+                            href="symptoms.html?action=add"
+                            class="quick-action"
+                        >
+
+                            <div class="quick-action-icon">
+                                ◌
+                            </div>
+
+                            <div class="quick-action-content">
+
+                                <strong>
+                                    Add Symptom
+                                </strong>
+
+                                <span>
+                                    Add symptom information
+                                </span>
+
+                            </div>
+
+                            <span class="quick-action-arrow">
+                                →
+                            </span>
+
+                        </a>
+
+
+
+                        <a
+                            href="facilities.html?action=add"
+                            class="quick-action"
+                        >
+
+                            <div class="quick-action-icon">
+                                +
+                            </div>
+
+                            <div class="quick-action-content">
+
+                                <strong>
+                                    Add Facility
+                                </strong>
+
+                                <span>
+                                    Add a healthcare facility
+                                </span>
+
+                            </div>
+
+                            <span class="quick-action-arrow">
+                                →
+                            </span>
+
+                        </a>
+
+
+
+                        <a
+                            href="health-facts.html?action=add"
+                            class="quick-action"
+                        >
+
+                            <div class="quick-action-icon">
+                                i
+                            </div>
+
+                            <div class="quick-action-content">
+
+                                <strong>
+                                    Add Health Fact
+                                </strong>
+
+                                <span>
+                                    Publish an educational fact
+                                </span>
+
+                            </div>
+
+                            <span class="quick-action-arrow">
+                                →
+                            </span>
+
+                        </a>
+
+
+
+                        <a
+                            href="myth-facts.html?action=add"
+                            class="quick-action"
+                        >
+
+                            <div class="quick-action-icon">
+                                ?
+                            </div>
+
+                            <div class="quick-action-content">
+
+                                <strong>
+                                    Add Myth / Fact
+                                </strong>
+
+                                <span>
+                                    Create myth versus fact content
+                                </span>
+
+                            </div>
+
+                            <span class="quick-action-arrow">
+                                →
+                            </span>
+
+                        </a>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+                     LOWER DASHBOARD
+                ================================================== -->
+
+                <div class="dashboard-lower-grid">
+
+
+                    <!-- =================================================
+                         RECENT ACTIVITY
+                    ================================================== -->
+
+                    <section class="admin-panel">
+
+                        <div class="admin-panel-header">
+
+                            <div>
+
+                                <span class="admin-eyebrow">
+                                    ACTIVITY
+                                </span>
+
+                                <h2>
+                                    Recent activity
+                                </h2>
+
+                            </div>
+
+                            <a
+                                href="activity.html"
+                                class="panel-link"
+                            >
+                                View all
+                                <span>→</span>
+                            </a>
+
+                        </div>
+
+
+                        <div class="activity-list">
+
+
+                            <article class="activity-item">
+
+                                <div
+                                    class="activity-marker condition-marker"
+                                >
+                                    +
+                                </div>
+
+                                <div class="activity-content">
+
+                                    <strong>
+                                        BPH content updated
+                                    </strong>
+
+                                    <p>
+                                        Benign Prostatic Hyperplasia
+                                        information was updated.
+                                    </p>
+
+                                    <span>
+                                        Today · 10:42 AM
+                                    </span>
+
+                                </div>
+
+                            </article>
+
+
+
+                            <article class="activity-item">
+
+                                <div
+                                    class="activity-marker symptom-marker"
+                                >
+                                    ◌
+                                </div>
+
+                                <div class="activity-content">
+
+                                    <strong>
+                                        Symptom information reviewed
+                                    </strong>
+
+                                    <p>
+                                        Urinary symptom content
+                                        was reviewed.
+                                    </p>
+
+                                    <span>
+                                        Yesterday · 3:18 PM
+                                    </span>
+
+                                </div>
+
+                            </article>
+
+
+
+                            <article class="activity-item">
+
+                                <div
+                                    class="activity-marker fact-marker"
+                                >
+                                    i
+                                </div>
+
+                                <div class="activity-content">
+
+                                    <strong>
+                                        Health fact published
+                                    </strong>
+
+                                    <p>
+                                        New educational information
+                                        was added to Health Facts.
+                                    </p>
+
+                                    <span>
+                                        2 days ago · 11:05 AM
+                                    </span>
+
+                                </div>
+
+                            </article>
+
+
+
+                            <article class="activity-item">
+
+                                <div
+                                    class="activity-marker facility-marker"
+                                >
+                                    +
+                                </div>
+
+                                <div class="activity-content">
+
+                                    <strong>
+                                        Facility directory reviewed
+                                    </strong>
+
+                                    <p>
+                                        Healthcare facility information
+                                        was reviewed.
+                                    </p>
+
+                                    <span>
+                                        3 days ago · 9:30 AM
+                                    </span>
+
+                                </div>
+
+                            </article>
+
+                        </div>
+
+                    </section>
+
+
+
+                    <!-- =================================================
+                         CONTENT SUMMARY
+                    ================================================== -->
+
+                    <section class="admin-panel">
+
+                        <div class="admin-panel-header">
+
+                            <div>
+
+                                <span class="admin-eyebrow">
+                                    CONTENT
+                                </span>
+
+                                <h2>
+                                    Content summary
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="content-summary">
+
+
+                            <div class="summary-row">
+
+                                <div class="summary-label">
+
+                                    <span
+                                        class="summary-dot prostate-summary"
+                                    ></span>
+
+                                    <span>
+                                        Prostate Health
+                                    </span>
+
+                                </div>
+
+                                <strong>
+                                    2
+                                </strong>
+
+                            </div>
+
+
+
+                            <div class="summary-row">
+
+                                <div class="summary-label">
+
+                                    <span
+                                        class="summary-dot urinary-summary"
+                                    ></span>
+
+                                    <span>
+                                        Urinary Health
+                                    </span>
+
+                                </div>
+
+                                <strong>
+                                    2
+                                </strong>
+
+                            </div>
+
+
+
+                            <div class="summary-row">
+
+                                <div class="summary-label">
+
+                                    <span
+                                        class="summary-dot sti-summary"
+                                    ></span>
+
+                                    <span>
+                                        STI / Sexual Health
+                                    </span>
+
+                                </div>
+
+                                <strong>
+                                    3
+                                </strong>
+
+                            </div>
+
+
+
+                            <div class="summary-row">
+
+                                <div class="summary-label">
+
+                                    <span
+                                        class="summary-dot symptom-summary"
+                                    ></span>
+
+                                    <span>
+                                        Symptoms
+                                    </span>
+
+                                </div>
+
+                                <strong>
+                                    6
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="summary-total">
+
+                            <span>
+                                Total conditions
+                            </span>
+
+                            <strong>
+                                7
+                            </strong>
+
+                        </div>
+
+                    </section>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     CONTENT QUALITY NOTICE
+                ================================================== -->
+
+                <section class="admin-notice">
+
+                    <div class="admin-notice-icon">
+                        i
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Content quality reminder
+                        </strong>
+
+                        <p>
+                            Health information published on MenCare
+                            should be reviewed against reliable,
+                            authoritative health sources before
+                            being made publicly available.
+                        </p>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 ADMIN FOOTER
+            ================================================== -->
+
+            <footer class="admin-footer">
+
+                <span>
+                    © 2026 MenCare Health Hub
+                </span>
+
+                <span>
+                    Administrator Dashboard
+                </span>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="/frontend/js/main.js"></script>
+
+    <script src="/frontend/js/admin/dashboard.js"></script>
+
+</body>
+
+</html>
