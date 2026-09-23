@@ -17,8 +17,8 @@ class MythFactCreate(MythFactBase):
 
 
 class MythFactUpdate(BaseModel):
-    myth: str | None = None
-    fact: str | None = None
+    myth: str | None = Field(default=None, min_length=2)
+    fact: str | None = Field(default=None, min_length=2)
     explanation: str | None = None
     category_id: UUID | None = None
 
