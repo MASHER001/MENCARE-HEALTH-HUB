@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Health Fact | MenCare Health Hub</title>
+
+    <meta
+        name="description"
+        content="Learn reliable men's urological and reproductive health facts through MenCare Health Hub."
+    >
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Public CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <!-- Animations -->
+    <link rel="stylesheet" href="../css/animations.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="site-header">
+
+        <div class="container header-container">
+
+            <!-- Logo -->
+            <a href="../index.html" class="site-logo">
+
+                <img
+                    src="../assets/icons/image.png"
+                    alt="MenCare Health Hub Logo"
+                >
+
+                <div class="logo-text">
+                    <strong>MenCare</strong>
+                    <span>Health Hub</span>
+                </div>
+
+            </a>
+
+
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav" aria-label="Main navigation">
+
+                <a href="../index.html">
+                    Home
+                </a>
+
+                <a href="health-topics.html">
+                    Health Topics
+                </a>
+
+                <a href="symptoms.html">
+                    Symptoms
+                </a>
+
+                <a href="healthcare.html">
+                    Healthcare
+                </a>
+
+                <a href="health-facts.html" class="active">
+                    Health Facts
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+            </nav>
+
+
+            <!-- Mobile Menu -->
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+
+        <!-- Mobile Navigation -->
+        <nav
+            class="mobile-nav"
+            id="mobileNav"
+            aria-label="Mobile navigation"
+        >
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="health-topics.html">
+                Health Topics
+            </a>
+
+            <a href="symptoms.html">
+                Symptoms
+            </a>
+
+            <a href="healthcare.html">
+                Healthcare
+            </a>
+
+            <a href="health-facts.html" class="active">
+                Health Facts
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="fact-page">
+
+        <!-- Breadcrumb -->
+
+        <section class="breadcrumb-section">
+
+            <div class="container">
+
+                <nav
+                    class="breadcrumb"
+                    aria-label="Breadcrumb"
+                >
+
+                    <a href="../index.html">
+                        Home
+                    </a>
+
+                    <span>/</span>
+
+                    <a href="health-facts.html">
+                        Health Facts
+                    </a>
+
+                    <span>/</span>
+
+                    <span id="factBreadcrumb">
+                        Health Fact
+                    </span>
+
+                </nav>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             FACT HERO
+        ================================================== -->
+
+        <section class="fact-hero">
+
+            <div class="container">
+
+                <div class="fact-hero-grid">
+
+                    <!-- Fact Content -->
+
+                    <div class="fact-main-content">
+
+                        <span class="fact-eyebrow">
+                            MEN'S HEALTH FACT
+                        </span>
+
+
+                        <h1 id="factTitle">
+                            Some sexually transmitted infections
+                            may cause few or no noticeable symptoms.
+                        </h1>
+
+
+                        <p
+                            class="fact-introduction"
+                            id="factDescription"
+                        >
+                            A person can have an infection without
+                            experiencing obvious symptoms. This is one
+                            reason why professional testing and
+                            appropriate healthcare are important when
+                            there may have been exposure.
+                        </p>
+
+
+                        <!-- Fact Meta -->
+
+                        <div class="fact-meta">
+
+                            <div class="fact-meta-item">
+
+                                <span class="meta-label">
+                                    CATEGORY
+                                </span>
+
+                                <strong id="factCategory">
+                                    Sexual Health
+                                </strong>
+
+                            </div>
+
+
+                            <div class="fact-meta-item">
+
+                                <span class="meta-label">
+                                    TOPIC
+                                </span>
+
+                                <strong id="factTopic">
+                                    STIs
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Save Fact -->
+
+                        <button
+                            type="button"
+                            class="fact-save-btn"
+                            id="saveFactBtn"
+                            aria-pressed="false"
+                        >
+
+                            <span
+                                class="save-icon"
+                                aria-hidden="true"
+                            >
+                                ♡
+                            </span>
+
+                            <span class="save-text">
+                                Save Fact
+                            </span>
+
+                        </button>
+
+                    </div>
+
+
+                    <!-- Fact Visual -->
+
+                    <div class="fact-visual">
+
+                        <div class="fact-symbol">
+
+                            <span>
+                                ✓
+                            </span>
+
+                        </div>
+
+                        <p>
+                            Reliable health information
+                            starts with understanding
+                            the facts.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             FACT DETAILS
+        ================================================== -->
+
+        <section class="fact-details-section">
+
+            <div class="container">
+
+                <div class="fact-details-layout">
+
+                    <!-- Main Explanation -->
+
+                    <article class="fact-content-card">
+
+                        <span class="section-eyebrow">
+                            UNDERSTANDING THE FACT
+                        </span>
+
+                        <h2>
+                            Why this matters
+                        </h2>
+
+
+                        <p id="factExplanation">
+                            Some health conditions, including some
+                            sexually transmitted infections, may
+                            occur without obvious symptoms.
+                            Someone may therefore not know that
+                            they have an infection.
+                        </p>
+
+
+                        <p>
+                            Learning about possible symptoms,
+                            prevention and professional testing
+                            can help people make informed decisions
+                            about their health.
+                        </p>
+
+
+                        <!-- Key Point -->
+
+                        <div class="fact-key-point">
+
+                            <span class="key-point-icon">
+                                !
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Key point
+                                </strong>
+
+                                <p id="factKeyPoint">
+                                    The absence of noticeable
+                                    symptoms does not always mean
+                                    that an infection or health
+                                    condition is absent.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Related Information -->
+
+                    <aside class="fact-sidebar">
+
+                        <div class="fact-sidebar-card">
+
+                            <span class="sidebar-label">
+                                EXPLORE MORE
+                            </span>
+
+                            <h3>
+                                Related Health Topics
+                            </h3>
+
+
+                            <a
+                                href="health-topics.html"
+                                class="fact-related-link"
+                            >
+
+                                <span>
+                                    Sexual Health
+                                </span>
+
+                                <span>
+                                    →
+                                </span>
+
+                            </a>
+
+
+                            <a
+                                href="symptoms.html"
+                                class="fact-related-link"
+                            >
+
+                                <span>
+                                    Symptoms & Health Check
+                                </span>
+
+                                <span>
+                                    →
+                                </span>
+
+                            </a>
+
+
+                            <a
+                                href="healthcare.html"
+                                class="fact-related-link"
+                            >
+
+                                <span>
+                                    Find Healthcare
+                                </span>
+
+                                <span>
+                                    →
+                                </span>
+
+                            </a>
+
+                        </div>
+
+                    </aside>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SOURCE / REFERENCE
+        ================================================== -->
+
+        <section class="fact-source-section">
+
+            <div class="container">
+
+                <div class="fact-source-card">
+
+                    <div>
+
+                        <span class="source-label">
+                            INFORMATION SOURCE
+                        </span>
+
+                        <h2>
+                            Learn from reliable health information
+                        </h2>
+
+                        <p>
+                            MenCare Health Hub uses reputable
+                            health information sources when
+                            developing educational content.
+                        </p>
+
+                    </div>
+
+
+                    <div class="source-details">
+
+                        <span>
+                            Source
+                        </span>
+
+                        <strong id="factSource">
+                            Reputable public health information
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             HEALTHCARE CTA
+        ================================================== -->
+
+        <section class="fact-cta">
+
+            <div class="container">
+
+                <div class="fact-cta-content">
+
+                    <span class="section-eyebrow">
+                        HAVE CONCERNS ABOUT YOUR HEALTH?
+                    </span>
+
+                    <h2>
+                        Information can help you know
+                        when to seek professional care.
+                    </h2>
+
+                    <p>
+                        If you have symptoms, believe you may
+                        have been exposed to an infection, or
+                        have concerns about your health, consider
+                        speaking with a qualified healthcare
+                        professional.
+                    </p>
+
+
+                    <div class="fact-cta-actions">
+
+                        <a
+                            href="healthcare.html"
+                            class="btn btn-light"
+                        >
+                            Find Healthcare
+                        </a>
+
+                        <a
+                            href="health-topics.html"
+                            class="btn btn-outline-light"
+                        >
+                            Explore Health Topics
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="container footer-container">
+
+            <div class="footer-brand">
+
+                <a
+                    href="../index.html"
+                    class="site-logo footer-logo"
+                >
+
+                    <img
+                        src="../assets/icons/image.png"
+                        alt="MenCare Health Hub Logo"
+                    >
+
+                    <div class="logo-text">
+                        <strong>MenCare</strong>
+                        <span>Health Hub</span>
+                    </div>
+
+                </a>
+
+
+                <p>
+                    Men's health information made clearer
+                    and easier to understand.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Explore
+                </h3>
+
+                <a href="health-topics.html">
+                    Health Topics
+                </a>
+
+                <a href="symptoms.html">
+                    Symptoms
+                </a>
+
+                <a href="health-facts.html">
+                    Health Facts
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Healthcare
+                </h3>
+
+                <a href="healthcare.html">
+                    Find Facilities
+                </a>
+
+                <a href="about.html">
+                    About MenCare
+                </a>
+
+                <a href="privacy.html">
+                    Privacy
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <div class="container">
+
+                <p>
+                    © <span id="currentYear"></span>
+                    MenCare Health Hub.
+                    Educational information only.
+                    Not a diagnosis.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="../js/main.js"></script>
+    <script src="../js/facts-card.js"></script>
+
+</body>
+</html>
