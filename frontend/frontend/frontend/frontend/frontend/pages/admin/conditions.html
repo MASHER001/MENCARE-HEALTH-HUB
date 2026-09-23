@@ -1,0 +1,1799 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="MenCare Health Hub - Manage Health Conditions"
+    >
+
+    <title>Conditions | MenCare Health Hub Admin</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Admin CSS -->
+    <link rel="stylesheet" href="/frontend/css/admin.css">
+    <link rel="stylesheet" href="/frontend/css/responsive.css">
+    <link rel="stylesheet" href="/frontend/css/animations.css">
+</head>
+
+
+<body class="admin-body">
+
+<div class="admin-app">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside
+        class="admin-sidebar"
+        id="adminSidebar"
+    >
+
+        <!-- Brand -->
+        <div class="admin-brand">
+
+            <a
+                href="dashboard.html"
+                class="admin-brand-link"
+            >
+
+                <img
+                    src="/assets/logos/enscare logo.png"
+                    alt="MenCare Health Hub Logo"
+                >
+
+                <div>
+                    <strong>MenCare</strong>
+                    <span>Health Hub</span>
+                </div>
+
+            </a>
+
+        </div>
+
+
+        <!-- Administrator -->
+        <div class="admin-profile">
+
+            <div class="admin-avatar">
+                A
+            </div>
+
+            <div class="admin-profile-info">
+
+                <strong>Administrator</strong>
+
+                <span>
+                    Content Manager
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Navigation -->
+        <nav
+            class="admin-nav"
+            aria-label="Admin navigation"
+        >
+
+            <p class="admin-nav-label">
+                MAIN
+            </p>
+
+
+            <a href="dashboard.html">
+                <span class="admin-nav-icon">⌂</span>
+                <span>Overview</span>
+            </a>
+
+
+            <a href="categories.html">
+                <span class="admin-nav-icon">▦</span>
+                <span>Categories</span>
+            </a>
+
+
+            <a
+                href="conditions.html"
+                class="active"
+            >
+                <span class="admin-nav-icon">✚</span>
+                <span>Conditions</span>
+            </a>
+
+
+            <a href="symptoms.html">
+                <span class="admin-nav-icon">◉</span>
+                <span>Symptoms</span>
+            </a>
+
+
+            <p class="admin-nav-label">
+                CONTENT
+            </p>
+
+
+            <a href="facilities.html">
+                <span class="admin-nav-icon">⌂</span>
+                <span>Healthcare Facilities</span>
+            </a>
+
+
+            <a href="health-facts.html">
+                <span class="admin-nav-icon">!</span>
+                <span>Health Facts</span>
+            </a>
+
+
+            <a href="myth-facts.html">
+                <span class="admin-nav-icon">?</span>
+                <span>Myth vs Fact</span>
+            </a>
+
+
+            <p class="admin-nav-label">
+                SYSTEM
+            </p>
+
+
+            <a href="../index.html" target="_blank">
+                <span class="admin-nav-icon">↗</span>
+                <span>View Website</span>
+            </a>
+
+
+            <a href="settings.html">
+                <span class="admin-nav-icon">⚙</span>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+
+        <!-- Sidebar Footer -->
+        <div class="admin-sidebar-footer">
+
+            <button
+                type="button"
+                class="admin-logout-btn"
+                id="logoutBtn"
+            >
+
+                <span>↪</span>
+
+                <span>
+                    Logout
+                </span>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="admin-main">
+
+
+        <!-- Topbar -->
+        <header class="admin-topbar">
+
+            <button
+                type="button"
+                class="admin-menu-toggle"
+                id="adminMenuToggle"
+                aria-label="Open admin navigation"
+                aria-expanded="false"
+            >
+                ☰
+            </button>
+
+
+            <div class="admin-topbar-title">
+
+                <span>
+                    Conditions
+                </span>
+
+            </div>
+
+
+            <div class="admin-date">
+                <span id="adminDate"></span>
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             PAGE CONTENT
+        ================================================== -->
+
+        <div class="admin-content">
+
+
+            <!-- Page Header -->
+            <section class="management-header">
+
+                <div>
+
+                    <p class="admin-eyebrow">
+                        HEALTH CONTENT
+                    </p>
+
+                    <h1>
+                        Manage Conditions
+                    </h1>
+
+                    <p>
+                        Add, update and manage health conditions
+                        displayed throughout MenCare Health Hub.
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="admin-btn admin-btn-primary"
+                    id="addConditionBtn"
+                >
+
+                    <span>+</span>
+
+                    Add Condition
+
+                </button>
+
+            </section>
+
+
+            <!-- =================================================
+                 STATISTICS
+            ================================================== -->
+
+            <section class="admin-stats-grid">
+
+
+                <article class="admin-stat-card">
+
+                    <div class="admin-stat-icon">
+                        ✚
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Total Conditions
+                        </span>
+
+                        <strong id="totalConditions">
+                            7
+                        </strong>
+
+                    </div>
+
+                </article>
+
+
+                <article class="admin-stat-card">
+
+                    <div class="admin-stat-icon prostate">
+                        P
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Prostate Health
+                        </span>
+
+                        <strong id="prostateConditions">
+                            2
+                        </strong>
+
+                    </div>
+
+                </article>
+
+
+                <article class="admin-stat-card">
+
+                    <div class="admin-stat-icon urinary">
+                        U
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Urinary Health
+                        </span>
+
+                        <strong id="urinaryConditions">
+                            2
+                        </strong>
+
+                    </div>
+
+                </article>
+
+
+                <article class="admin-stat-card">
+
+                    <div class="admin-stat-icon sti">
+                        S
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Sexual Health
+                        </span>
+
+                        <strong id="stiConditions">
+                            3
+                        </strong>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+
+            <!-- =================================================
+                 SEARCH / FILTER
+            ================================================== -->
+
+            <section class="admin-panel">
+
+                <div class="admin-search-header">
+
+                    <div>
+
+                        <h2>
+                            Conditions
+                        </h2>
+
+                        <p>
+                            Browse and manage all health conditions.
+                        </p>
+
+                    </div>
+
+
+                    <div class="admin-search-tools">
+
+                        <div class="admin-search-box">
+
+                            <span>
+                                ⌕
+                            </span>
+
+                            <input
+                                type="search"
+                                id="conditionSearch"
+                                placeholder="Search conditions..."
+                                aria-label="Search conditions"
+                            >
+
+                        </div>
+
+
+                        <select
+                            id="conditionCategoryFilter"
+                            class="admin-select"
+                            aria-label="Filter by category"
+                        >
+
+                            <option value="all">
+                                All Categories
+                            </option>
+
+                            <option value="prostate">
+                                Prostate Health
+                            </option>
+
+                            <option value="urinary">
+                                Urinary Health
+                            </option>
+
+                            <option value="sti">
+                                Sexual Health
+                            </option>
+
+                        </select>
+
+
+                        <button
+                            type="button"
+                            class="admin-btn admin-btn-secondary"
+                            id="clearConditionSearch"
+                        >
+                            Clear
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     TABLE
+                ================================================== -->
+
+                <div class="admin-table-wrapper">
+
+                    <table class="admin-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Condition
+                                </th>
+
+                                <th>
+                                    Category
+                                </th>
+
+                                <th>
+                                    Symptoms
+                                </th>
+
+                                <th>
+                                    Status
+                                </th>
+
+                                <th>
+                                    Last Updated
+                                </th>
+
+                                <th>
+                                    Actions
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="conditionTableBody">
+
+
+                            <!-- BPH -->
+                            <tr
+                                class="condition-row"
+                                data-id="bph"
+                                data-name="Benign Prostatic Hyperplasia"
+                                data-short-name="BPH"
+                                data-category="prostate"
+                                data-description="Benign prostatic hyperplasia is a non-cancerous enlargement of the prostate that may affect urination."
+                                data-symptoms="Frequent urination, weak urine stream, difficulty starting urination, incomplete bladder emptying"
+                                data-status="published"
+                            >
+
+                                <td>
+
+                                    <div class="condition-name-cell">
+
+                                        <div class="condition-mini-icon prostate">
+                                            P
+                                        </div>
+
+                                        <div>
+
+                                            <strong>
+                                                Benign Prostatic Hyperplasia
+                                            </strong>
+
+                                            <span>
+                                                BPH
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+
+                                    <span class="category-badge prostate">
+                                        Prostate Health
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+                                    4
+                                </td>
+
+
+                                <td>
+
+                                    <span class="status-badge published">
+                                        Published
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+                                    22 Sep 2026
+                                </td>
+
+
+                                <td>
+
+                                    <div class="table-actions">
+
+                                        <button
+                                            type="button"
+                                            class="table-action view-condition-btn"
+                                            title="View condition"
+                                        >
+                                            View
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="table-action edit-condition-btn"
+                                            title="Edit condition"
+                                        >
+                                            Edit
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="table-action danger delete-condition-btn"
+                                            title="Delete condition"
+                                        >
+                                            Delete
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+                            <!-- Prostatitis -->
+                            <tr
+                                class="condition-row"
+                                data-id="prostatitis"
+                                data-name="Prostatitis"
+                                data-short-name="Prostatitis"
+                                data-category="prostate"
+                                data-description="Prostatitis refers to inflammation of the prostate and may have different causes."
+                                data-symptoms="Painful urination, pelvic discomfort, urinary frequency, difficulty urinating"
+                                data-status="published"
+                            >
+
+                                <td>
+
+                                    <div class="condition-name-cell">
+
+                                        <div class="condition-mini-icon prostate">
+                                            P
+                                        </div>
+
+                                        <div>
+
+                                            <strong>
+                                                Prostatitis
+                                            </strong>
+
+                                            <span>
+                                                Prostate inflammation
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+
+                                    <span class="category-badge prostate">
+                                        Prostate Health
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+                                    4
+                                </td>
+
+
+                                <td>
+
+                                    <span class="status-badge published">
+                                        Published
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+                                    22 Sep 2026
+                                </td>
+
+
+                                <td>
+
+                                    <div class="table-actions">
+
+                                        <button
+                                            type="button"
+                                            class="table-action view-condition-btn"
+                                        >
+                                            View
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="table-action edit-condition-btn"
+                                        >
+                                            Edit
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="table-action danger delete-condition-btn"
+                                        >
+                                            Delete
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+                            <!-- UTI -->
+                            <tr
+                                class="condition-row"
+                                data-id="uti"
+                                data-name="Urinary Tract Infection"
+                                data-short-name="UTI"
+                                data-category="urinary"
+                                data-description="A urinary tract infection is an infection affecting parts of the urinary system."
+                                data-symptoms="Painful urination, frequent urination, urgency, lower abdominal discomfort"
+                                data-status="published"
+                            >
+
+                                <td>
+
+                                    <div class="condition-name-cell">
+
+                                        <div class="condition-mini-icon urinary">
+                                            U
+                                        </div>
+
+                                        <div>
+
+                                            <strong>
+                                                Urinary Tract Infection
+                                            </strong>
+
+                                            <span>
+                                                UTI
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+
+                                    <span class="category-badge urinary">
+                                        Urinary Health
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+                                    4
+                                </td>
+
+
+                                <td>
+
+                                    <span class="status-badge published">
+                                        Published
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+                                    22 Sep 2026
+                                </td>
+
+
+                                <td>
+
+                                    <div class="table-actions">
+
+                                        <button
+                                            type="button"
+                                            class="table-action view-condition-btn"
+                                        >
+                                            View
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="table-action edit-condition-btn"
+                                        >
+                                            Edit
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="table-action danger delete-condition-btn"
+                                        >
+                                            Delete
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+                            <!-- Urethritis -->
+                            <tr
+                                class="condition-row"
+                                data-id="urethritis"
+                                data-name="Urethritis"
+                                data-short-name="Urethritis"
+                                data-category="urinary"
+                                data-description="Urethritis is inflammation of the urethra and may be associated with infection or other causes."
+                                data-symptoms="Painful urination, discharge, irritation, urinary discomfort"
+                                data-status="published"
+                            >
+
+                                <td>
+
+                                    <div class="condition-name-cell">
+
+                                        <div class="condition-mini-icon urinary">
+                                            U
+                                        </div>
+
+                                        <div>
+
+                                            <strong>
+                                                Urethritis
+                                            </strong>
+
+                                            <span>
+                                                Urethral inflammation
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+
+                                    <span class="category-badge urinary">
+                                        Urinary Health
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+                                    4
+                                </td>
+
+
+                                <td>
+
+                                    <span class="status-badge published">
+                                        Published
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+                                    22 Sep 2026
+                                </td>
+
+
+                                <td>
+
+                                    <div class="table-actions">
+
+                                        <button
+                                            type="button"
+                                            class="table-action view-condition-btn"
+                                        >
+                                            View
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="table-action edit-condition-btn"
+                                        >
+                                            Edit
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="table-action danger delete-condition-btn"
+                                        >
+                                            Delete
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+                            <!-- Chlamydia -->
+                            <tr
+                                class="condition-row"
+                                data-id="chlamydia"
+                                data-name="Chlamydia"
+                                data-short-name="Chlamydia"
+                                data-category="sti"
+                                data-description="Chlamydia is a sexually transmitted infection caused by bacteria."
+                                data-symptoms="Discharge, painful urination, genital discomfort, possible absence of symptoms"
+                                data-status="published"
+                            >
+
+                                <td>
+
+                                    <div class="condition-name-cell">
+
+                                        <div class="condition-mini-icon sti">
+                                            S
+                                        </div>
+
+                                        <div>
+
+                                            <strong>
+                                                Chlamydia
+                                            </strong>
+
+                                            <span>
+                                                STI
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+
+                                    <span class="category-badge sti">
+                                        Sexual Health
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+                                    4
+                                </td>
+
+
+                                <td>
+
+                                    <span class="status-badge published">
+                                        Published
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+                                    22 Sep 2026
+                                </td>
+
+
+                                <td>
+
+                                    <div class="table-actions">
+
+                                        <button
+                                            type="button"
+                                            class="table-action view-condition-btn"
+                                        >
+                                            View
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="table-action edit-condition-btn"
+                                        >
+                                            Edit
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="table-action danger delete-condition-btn"
+                                        >
+                                            Delete
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+                            <!-- Gonorrhea -->
+                            <tr
+                                class="condition-row"
+                                data-id="gonorrhea"
+                                data-name="Gonorrhea"
+                                data-short-name="Gonorrhea"
+                                data-category="sti"
+                                data-description="Gonorrhea is a sexually transmitted infection caused by bacteria."
+                                data-symptoms="Discharge, painful urination, genital discomfort, possible absence of symptoms"
+                                data-status="published"
+                            >
+
+                                <td>
+
+                                    <div class="condition-name-cell">
+
+                                        <div class="condition-mini-icon sti">
+                                            S
+                                        </div>
+
+                                        <div>
+
+                                            <strong>
+                                                Gonorrhea
+                                            </strong>
+
+                                            <span>
+                                                STI
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+
+                                    <span class="category-badge sti">
+                                        Sexual Health
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+                                    4
+                                </td>
+
+
+                                <td>
+
+                                    <span class="status-badge published">
+                                        Published
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+                                    22 Sep 2026
+                                </td>
+
+
+                                <td>
+
+                                    <div class="table-actions">
+
+                                        <button
+                                            type="button"
+                                            class="table-action view-condition-btn"
+                                        >
+                                            View
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="table-action edit-condition-btn"
+                                        >
+                                            Edit
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="table-action danger delete-condition-btn"
+                                        >
+                                            Delete
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+                            <!-- Genital Herpes -->
+                            <tr
+                                class="condition-row"
+                                data-id="genital-herpes"
+                                data-name="Genital Herpes"
+                                data-short-name="Genital Herpes"
+                                data-category="sti"
+                                data-description="Genital herpes is a sexually transmitted infection caused by herpes simplex virus."
+                                data-symptoms="Blisters, sores, discomfort, itching, possible absence of symptoms"
+                                data-status="published"
+                            >
+
+                                <td>
+
+                                    <div class="condition-name-cell">
+
+                                        <div class="condition-mini-icon sti">
+                                            S
+                                        </div>
+
+                                        <div>
+
+                                            <strong>
+                                                Genital Herpes
+                                            </strong>
+
+                                            <span>
+                                                STI
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+
+                                    <span class="category-badge sti">
+                                        Sexual Health
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+                                    4
+                                </td>
+
+
+                                <td>
+
+                                    <span class="status-badge published">
+                                        Published
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+                                    22 Sep 2026
+                                </td>
+
+
+                                <td>
+
+                                    <div class="table-actions">
+
+                                        <button
+                                            type="button"
+                                            class="table-action view-condition-btn"
+                                        >
+                                            View
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="table-action edit-condition-btn"
+                                        >
+                                            Edit
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="table-action danger delete-condition-btn"
+                                        >
+                                            Delete
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <!-- Empty Search State -->
+                <div
+                    class="admin-empty-state"
+                    id="emptyConditionState"
+                    hidden
+                >
+
+                    <div class="empty-state-icon">
+                        ⌕
+                    </div>
+
+                    <h3>
+                        No conditions found
+                    </h3>
+
+                    <p>
+                        Try a different search term or category.
+                    </p>
+
+                    <button
+                        type="button"
+                        class="admin-btn admin-btn-secondary"
+                        id="resetConditionFilters"
+                    >
+                        Reset Filters
+                    </button>
+
+                </div>
+
+
+                <!-- Table Footer -->
+                <div class="admin-table-footer">
+
+                    <span>
+                        Showing
+                        <strong id="showingConditions">
+                            7
+                        </strong>
+                        conditions
+                    </span>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 CONTENT QUALITY NOTICE
+            ================================================== -->
+
+            <section class="admin-notice">
+
+                <div class="admin-notice-icon">
+                    !
+                </div>
+
+                <div>
+
+                    <h3>
+                        Keep health information current
+                    </h3>
+
+                    <p>
+                        Condition information should be reviewed
+                        against reliable health sources before being
+                        published or updated on MenCare Health Hub.
+                    </p>
+
+                </div>
+
+            </section>
+
+        </div>
+
+
+        <!-- =================================================
+             FOOTER
+        ================================================== -->
+
+        <footer class="admin-footer">
+
+            <p>
+                ©
+                <span id="adminFooterYear"></span>
+                MenCare Health Hub.
+                Admin Panel.
+            </p>
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<!-- =========================================================
+     ADD / EDIT CONDITION MODAL
+========================================================= -->
+
+<div
+    class="admin-modal"
+    id="conditionModal"
+    aria-hidden="true"
+>
+
+    <div class="admin-modal-overlay"></div>
+
+    <div
+        class="admin-modal-dialog condition-modal-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="conditionModalTitle"
+    >
+
+        <div class="admin-modal-header">
+
+            <div>
+
+                <p class="admin-eyebrow">
+                    HEALTH CONTENT
+                </p>
+
+                <h2 id="conditionModalTitle">
+                    Add Condition
+                </h2>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="modal-close"
+                id="closeConditionModal"
+                aria-label="Close modal"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <form id="conditionForm">
+
+            <input
+                type="hidden"
+                id="conditionId"
+            >
+
+
+            <div class="admin-form-grid">
+
+
+                <!-- Name -->
+                <div class="admin-form-group">
+
+                    <label for="conditionName">
+                        Condition Name
+                        <span>*</span>
+                    </label>
+
+                    <input
+                        type="text"
+                        id="conditionName"
+                        placeholder="e.g. Benign Prostatic Hyperplasia"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Short Name -->
+                <div class="admin-form-group">
+
+                    <label for="conditionShortName">
+                        Short Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="conditionShortName"
+                        placeholder="e.g. BPH"
+                    >
+
+                </div>
+
+
+                <!-- Category -->
+                <div class="admin-form-group">
+
+                    <label for="conditionCategory">
+                        Category
+                        <span>*</span>
+                    </label>
+
+                    <select
+                        id="conditionCategory"
+                        required
+                    >
+
+                        <option value="">
+                            Select category
+                        </option>
+
+                        <option value="prostate">
+                            Prostate Health
+                        </option>
+
+                        <option value="urinary">
+                            Urinary Health
+                        </option>
+
+                        <option value="sti">
+                            Sexual Health
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Status -->
+                <div class="admin-form-group">
+
+                    <label for="conditionStatus">
+                        Status
+                    </label>
+
+                    <select id="conditionStatus">
+
+                        <option value="published">
+                            Published
+                        </option>
+
+                        <option value="draft">
+                            Draft
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Description -->
+                <div class="admin-form-group full-width">
+
+                    <label for="conditionDescription">
+                        Short Description
+                        <span>*</span>
+                    </label>
+
+                    <textarea
+                        id="conditionDescription"
+                        rows="4"
+                        placeholder="Write a short educational description..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <!-- Symptoms -->
+                <div class="admin-form-group full-width">
+
+                    <label for="conditionSymptoms">
+                        Symptoms
+                    </label>
+
+                    <textarea
+                        id="conditionSymptoms"
+                        rows="4"
+                        placeholder="Separate symptoms with commas..."
+                    ></textarea>
+
+                    <small>
+                        Example: Painful urination, frequent urination,
+                        pelvic discomfort
+                    </small>
+
+                </div>
+
+
+                <!-- Risk Factors -->
+                <div class="admin-form-group full-width">
+
+                    <label for="conditionRiskFactors">
+                        Risk Factors
+                    </label>
+
+                    <textarea
+                        id="conditionRiskFactors"
+                        rows="4"
+                        placeholder="Add relevant risk factors..."
+                    ></textarea>
+
+                </div>
+
+
+                <!-- Prevention -->
+                <div class="admin-form-group full-width">
+
+                    <label for="conditionPrevention">
+                        Prevention / Risk Reduction
+                    </label>
+
+                    <textarea
+                        id="conditionPrevention"
+                        rows="4"
+                        placeholder="Add prevention or risk-reduction information..."
+                    ></textarea>
+
+                </div>
+
+
+                <!-- Diagnosis -->
+                <div class="admin-form-group full-width">
+
+                    <label for="conditionDiagnosis">
+                        Diagnosis Overview
+                    </label>
+
+                    <textarea
+                        id="conditionDiagnosis"
+                        rows="4"
+                        placeholder="Describe how healthcare professionals may evaluate the condition..."
+                    ></textarea>
+
+                </div>
+
+
+                <!-- Treatment -->
+                <div class="admin-form-group full-width">
+
+                    <label for="conditionTreatment">
+                        Treatment Overview
+                    </label>
+
+                    <textarea
+                        id="conditionTreatment"
+                        rows="4"
+                        placeholder="Provide high-level treatment information only..."
+                    ></textarea>
+
+                </div>
+
+
+                <!-- Complications -->
+                <div class="admin-form-group full-width">
+
+                    <label for="conditionComplications">
+                        Complications
+                    </label>
+
+                    <textarea
+                        id="conditionComplications"
+                        rows="4"
+                        placeholder="Add possible complications..."
+                    ></textarea>
+
+                </div>
+
+
+                <!-- When to Seek Help -->
+                <div class="admin-form-group full-width">
+
+                    <label for="conditionSeekHelp">
+                        When to Seek Medical Help
+                    </label>
+
+                    <textarea
+                        id="conditionSeekHelp"
+                        rows="4"
+                        placeholder="Explain when professional medical care should be sought..."
+                    ></textarea>
+
+                </div>
+
+            </div>
+
+
+            <!-- Modal Actions -->
+            <div class="admin-modal-actions">
+
+                <button
+                    type="button"
+                    class="admin-btn admin-btn-secondary"
+                    id="cancelConditionBtn"
+                >
+                    Cancel
+                </button>
+
+                <button
+                    type="submit"
+                    class="admin-btn admin-btn-primary"
+                    id="saveConditionBtn"
+                >
+                    Save Condition
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     VIEW CONDITION MODAL
+========================================================= -->
+
+<div
+    class="admin-modal"
+    id="viewConditionModal"
+    aria-hidden="true"
+>
+
+    <div class="admin-modal-overlay"></div>
+
+    <div
+        class="admin-modal-dialog condition-view-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="viewConditionTitle"
+    >
+
+        <div class="admin-modal-header">
+
+            <div>
+
+                <p class="admin-eyebrow">
+                    CONDITION DETAILS
+                </p>
+
+                <h2 id="viewConditionTitle">
+                    Condition
+                </h2>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="modal-close"
+                id="closeViewConditionModal"
+                aria-label="Close modal"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="condition-view-content">
+
+
+            <!-- Category -->
+            <div class="condition-view-meta">
+
+                <span
+                    class="category-badge"
+                    id="viewConditionCategory"
+                >
+                    Prostate Health
+                </span>
+
+                <span
+                    class="status-badge published"
+                    id="viewConditionStatus"
+                >
+                    Published
+                </span>
+
+            </div>
+
+
+            <!-- Description -->
+            <div class="condition-detail-block">
+
+                <h3>
+                    Description
+                </h3>
+
+                <p id="viewConditionDescription">
+                    —
+                </p>
+
+            </div>
+
+
+            <!-- Symptoms -->
+            <div class="condition-detail-block">
+
+                <h3>
+                    Symptoms
+                </h3>
+
+                <p id="viewConditionSymptoms">
+                    —
+                </p>
+
+            </div>
+
+
+            <!-- Information Grid -->
+            <div class="condition-info-grid">
+
+
+                <div class="condition-detail-block">
+
+                    <h3>
+                        Risk Factors
+                    </h3>
+
+                    <p id="viewConditionRiskFactors">
+                        —
+                    </p>
+
+                </div>
+
+
+                <div class="condition-detail-block">
+
+                    <h3>
+                        Prevention
+                    </h3>
+
+                    <p id="viewConditionPrevention">
+                        —
+                    </p>
+
+                </div>
+
+
+                <div class="condition-detail-block">
+
+                    <h3>
+                        Diagnosis
+                    </h3>
+
+                    <p id="viewConditionDiagnosis">
+                        —
+                    </p>
+
+                </div>
+
+
+                <div class="condition-detail-block">
+
+                    <h3>
+                        Treatment Overview
+                    </h3>
+
+                    <p id="viewConditionTreatment">
+                        —
+                    </p>
+
+                </div>
+
+
+                <div class="condition-detail-block">
+
+                    <h3>
+                        Complications
+                    </h3>
+
+                    <p id="viewConditionComplications">
+                        —
+                    </p>
+
+                </div>
+
+
+                <div class="condition-detail-block">
+
+                    <h3>
+                        When to Seek Help
+                    </h3>
+
+                    <p id="viewConditionSeekHelp">
+                        —
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="admin-modal-actions">
+
+            <button
+                type="button"
+                class="admin-btn admin-btn-secondary"
+                id="closeViewConditionBtn"
+            >
+                Close
+            </button>
+
+            <button
+                type="button"
+                class="admin-btn admin-btn-primary"
+                id="editViewedConditionBtn"
+            >
+                Edit Condition
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script src="/frontend/js/main.js"></script>
+<script src="/frontend/js/admin/conditions.js"></script>
+
+</body>
+</html>
