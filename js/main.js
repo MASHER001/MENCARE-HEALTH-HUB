@@ -10,8 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
-       PUBLIC MOBILE NAVIGATION
-       Used by the public website
+       MOBILE NAVIGATION
+       Works on public pages
     ===================================================== */
 
     const menuToggle =
@@ -28,13 +28,27 @@ document.addEventListener("DOMContentLoaded", () => {
             const isOpen =
                 mobileNav.classList.toggle("open");
 
+            menuToggle.classList.toggle(
+                "active",
+                isOpen
+            );
+
             menuToggle.setAttribute(
                 "aria-expanded",
                 String(isOpen)
             );
 
+            menuToggle.setAttribute(
+                "aria-label",
+                isOpen
+                    ? "Close navigation menu"
+                    : "Open navigation menu"
+            );
+
         });
 
+
+        /* Close mobile menu after clicking a link */
 
         const mobileLinks =
             mobileNav.querySelectorAll("a");
@@ -46,9 +60,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 mobileNav.classList.remove("open");
 
+                menuToggle.classList.remove("active");
+
                 menuToggle.setAttribute(
                     "aria-expanded",
                     "false"
+                );
+
+                menuToggle.setAttribute(
+                    "aria-label",
+                    "Open navigation menu"
                 );
 
             });
@@ -59,40 +80,103 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
-       PUBLIC HEADER SCROLL
-       Only runs if a public header exists
+       HEADER SCROLL EFFECT
+       Supports both:
+       .site-header
+       #siteHeader
     ===================================================== */
 
     const publicHeader =
         document.querySelector(".site-header");
 
+    const siteHeader =
+        document.getElementById("siteHeader");
 
-    if (publicHeader) {
 
-        window.addEventListener("scroll", () => {
+    const header =
+        publicHeader || siteHeader;
+
+
+    if (header) {
+
+        const updateHeader = () => {
 
             if (window.scrollY > 20) {
 
-                publicHeader.classList.add(
-                    "scrolled"
-                );
+                header.classList.add("scrolled");
 
             } else {
 
-                publicHeader.classList.remove(
-                    "scrolled"
-                );
+                header.classList.remove("scrolled");
 
             }
 
-        });
+        };
+
+
+        window.addEventListener(
+            "scroll",
+            updateHeader,
+            { passive: true }
+        );
+
+
+        updateHeader();
 
     }
 
 
     /* =====================================================
+       ACTIVE NAVIGATION
+       Supports links using [data-nav]
+    ===================================================== */
+
+    const currentPage =
+        window.location.pathname
+            .split("/")
+            .pop()
+            .toLowerCase();
+
+
+    const navLinks =
+        document.querySelectorAll(
+            "[data-nav]"
+        );
+
+
+    navLinks.forEach(link => {
+
+        const href =
+            link.getAttribute("href");
+
+
+        if (!href) {
+            return;
+        }
+
+
+        const targetPage =
+            href
+                .split("/")
+                .pop()
+                .split("?")[0]
+                .toLowerCase();
+
+
+        if (
+            targetPage &&
+            targetPage === currentPage
+        ) {
+
+            link.classList.add("active");
+
+        }
+
+    });
+
+
+    /* =====================================================
        CURRENT YEAR
-       Works anywhere a #currentYear exists
     ===================================================== */
 
     const currentYear =
@@ -109,7 +193,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* =====================================================
        GENERIC CLOSE BUTTONS
-       Only elements explicitly using data-close-target
+       Elements can use:
+
+       data-close-target="elementId"
     ===================================================== */
 
     const closeButtons =
@@ -125,6 +211,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const targetId =
                 button.dataset.closeTarget;
 
+
             const target =
                 document.getElementById(targetId);
 
@@ -132,6 +219,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (target) {
 
                 target.classList.remove("open");
+
                 target.classList.remove("show");
 
             }
@@ -143,7 +231,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* =====================================================
        ESCAPE KEY
-       Generic public-page behaviour
+       Close mobile navigation
     ===================================================== */
 
     document.addEventListener(
@@ -155,8 +243,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
 
-            /* Close public mobile navigation */
-
             if (
                 mobileNav &&
                 mobileNav.classList.contains("open")
@@ -164,11 +250,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 mobileNav.classList.remove("open");
 
+
                 if (menuToggle) {
+
+                    menuToggle.classList.remove(
+                        "active"
+                    );
 
                     menuToggle.setAttribute(
                         "aria-expanded",
                         "false"
+                    );
+
+                    menuToggle.setAttribute(
+                        "aria-label",
+                        "Open navigation menu"
                     );
 
                 }
@@ -179,4 +275,3 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
 });
-```
