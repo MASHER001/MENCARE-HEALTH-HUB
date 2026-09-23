@@ -1,17 +1,1350 @@
 /* =========================================================
+<<<<<<< HEAD
    HEALTH FACTS RESPONSIVE
 ========================================================= */
 
 @media (max-width: 1000px) {
 
     .health-facts-grid {
+=======
+   MENCARE HEALTH HUB
+   RESPONSIVE STYLES
+   ADMIN DASHBOARD
+========================================================= */
+
+
+/* =========================================================
+   LARGE TABLETS / SMALL LAPTOPS
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .admin-content {
+        padding: 32px;
+    }
+
+
+    .admin-topbar {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+
+    .statistics-grid {
+>>>>>>> 975d5e836addfc55e5e8cdbefeceb144ed4b103d
         grid-template-columns:
             repeat(2, minmax(0, 1fr));
     }
 
+<<<<<<< HEAD
     .facts-toolbar {
         grid-template-columns: 1fr;
         align-items: stretch;
+=======
+
+    .quick-actions-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================================================
+   TABLETS
+========================================================= */
+
+@media (max-width: 900px) {
+
+    /* Sidebar */
+
+    .admin-sidebar {
+        transform: translateX(-100%);
+    }
+
+
+    .admin-sidebar.open {
+        transform: translateX(0);
+    }
+
+
+    /* Main */
+
+    .admin-main {
+        width: 100%;
+
+        margin-left: 0;
+    }
+
+
+    /* Menu */
+
+    .admin-menu-toggle {
+        display: flex;
+    }
+
+
+    /* Lower dashboard */
+
+    .dashboard-lower-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE / LARGE PHONE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    /* Topbar */
+
+    .admin-topbar {
+        min-height: 70px;
+
+        padding:
+            13px 20px;
+    }
+
+
+    .admin-content {
+        padding:
+            25px 20px;
+    }
+
+
+    /* Welcome */
+
+    .admin-welcome {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        padding: 25px;
+    }
+
+
+    .dashboard-date {
+        width: 100%;
+
+        box-sizing: border-box;
+
+        text-align: left;
+    }
+
+
+    /* Statistics */
+
+    .statistics-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Quick Actions */
+
+    .quick-actions-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Footer */
+
+    .admin-footer {
+        padding:
+            18px 20px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 6px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .admin-topbar {
+        min-height: 65px;
+
+        padding:
+            12px 14px;
+    }
+
+
+    .admin-topbar h1 {
+        font-size: 1.45rem;
+    }
+
+
+    .admin-topbar-actions {
+        gap: 8px;
+    }
+
+
+    .view-site-btn {
+        display: none;
+    }
+
+
+    .admin-content {
+        padding:
+            20px 14px;
+    }
+
+
+    .admin-welcome {
+        margin-bottom: 32px;
+
+        padding: 22px;
+    }
+
+
+    .admin-welcome h2 {
+        font-size: 1.8rem;
+    }
+
+
+    .admin-welcome p {
+        font-size: 0.82rem;
+    }
+
+
+    .admin-section {
+        margin-bottom: 35px;
+    }
+
+
+    .admin-section-heading h2,
+    .admin-panel-header h2 {
+        font-size: 1.5rem;
+    }
+
+
+    .admin-panel-header {
+        padding: 18px;
+    }
+
+
+    .activity-item {
+        padding:
+            16px 18px;
+    }
+
+
+    .admin-notice {
+        padding: 17px;
+    }
+
+
+    .admin-notice {
+        flex-direction: column;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL SCREENS
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .admin-content {
+        padding:
+            16px 10px;
+    }
+
+
+    .admin-welcome {
+        padding: 18px;
+    }
+
+
+    .stat-card {
+        padding: 18px;
+    }
+
+
+    .quick-action {
+        padding: 13px;
+    }
+
+
+    .quick-action-icon {
+        width: 38px;
+        height: 38px;
+    }
+
+}
+/* =========================================================
+   MENCARE HEALTH HUB
+   RESPONSIVE CSS
+   CATEGORY MANAGEMENT
+========================================================= */
+
+
+/* =========================================================
+   1200px
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .management-stats {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================================================
+   900px
+========================================================= */
+
+@media (max-width: 900px) {
+
+    /* Sidebar */
+
+    .admin-sidebar {
+        transform:
+            translateX(-100%);
+    }
+
+
+    .admin-sidebar.open {
+        transform:
+            translateX(0);
+    }
+
+
+    /* Main */
+
+    .admin-main {
+        width: 100%;
+
+        margin-left: 0;
+    }
+
+
+    /* Menu */
+
+    .admin-menu-toggle {
+        display: flex;
+    }
+
+
+    /* Content */
+
+    .admin-content {
+        padding: 32px;
+    }
+
+
+    /* Header */
+
+    .management-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .management-header .admin-primary-btn {
+        width: auto;
+    }
+
+}
+
+
+/* =========================================================
+   700px
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .admin-topbar {
+        min-height: 70px;
+
+        padding:
+            13px 20px;
+    }
+
+
+    .admin-content {
+        padding:
+            25px 20px;
+    }
+
+
+    .management-stats {
+        grid-template-columns: 1fr;
+    }
+
+
+    .management-header h2 {
+        font-size: 2rem;
+    }
+
+
+    .management-header p {
+        font-size: 0.79rem;
+    }
+
+
+    .admin-panel-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .category-search {
+        width: 100%;
+    }
+
+
+    .category-search input {
+        width: 100%;
+    }
+
+
+    .admin-footer {
+        padding:
+            18px 20px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 6px;
+    }
+
+}
+
+
+/* =========================================================
+   480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .admin-topbar {
+        min-height: 65px;
+
+        padding:
+            12px 14px;
+    }
+
+
+    .admin-topbar h1 {
+        font-size: 1.45rem;
+    }
+
+
+    .admin-topbar-actions {
+        gap: 8px;
+    }
+
+
+    .view-site-btn {
+        display: none;
+    }
+
+
+    .admin-content {
+        padding:
+            20px 14px;
+    }
+
+
+    .management-header {
+        margin-bottom: 22px;
+    }
+
+
+    .management-header h2 {
+        font-size: 1.8rem;
+    }
+
+
+    .management-header .admin-primary-btn {
+        width: 100%;
+    }
+
+
+    .management-stat {
+        padding: 17px;
+    }
+
+
+    .admin-panel-header {
+        padding: 18px;
+    }
+
+
+    .admin-panel-header h2 {
+        font-size: 1.5rem;
+    }
+
+
+    .admin-notice {
+        flex-direction: column;
+
+        padding: 17px;
+    }
+
+
+    .admin-modal {
+        padding: 12px;
+    }
+
+
+    .admin-modal-header {
+        padding: 18px;
+    }
+
+
+    .admin-modal-header h2 {
+        font-size: 1.5rem;
+    }
+
+
+    .admin-form {
+        padding: 18px;
+    }
+
+
+    .category-details {
+        padding:
+            5px 18px 18px;
+    }
+
+
+    .category-detail-row {
+        grid-template-columns: 1fr;
+
+        gap: 6px;
+    }
+
+
+    .category-view-modal > .admin-form-actions {
+        padding:
+            0 18px 18px;
+    }
+
+
+    .admin-form-actions {
+        flex-direction: column-reverse;
+    }
+
+
+    .admin-form-actions button {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   360px
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .admin-content {
+        padding:
+            16px 10px;
+    }
+
+
+    .management-header h2 {
+        font-size: 1.65rem;
+    }
+
+
+    .management-stat {
+        padding: 15px;
+    }
+
+
+    .management-stat-icon {
+        width: 38px;
+        height: 38px;
+    }
+
+}
+/* =========================================================
+   MENCARE — RESPONSIVE STYLES
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .site-nav {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .healthcare-cta-content {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-links {
+        gap: 50px;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .condition-breadcrumb-section {
+        padding-top: 20px;
+    }
+
+    .condition-card-section {
+        padding: 30px 0 50px;
+    }
+
+    .condition-card-header {
+        padding: 24px 24px 16px;
+    }
+
+    .condition-card-content {
+        padding: 0 24px 24px;
+    }
+
+    .condition-card-footer {
+        align-items: stretch;
+        flex-direction: column;
+
+        padding:
+            18px 24px 24px;
+    }
+
+    .condition-learn-btn {
+        width: 100%;
+    }
+
+    .condition-save-btn {
+        justify-content: center;
+    }
+
+    .condition-card-info {
+        grid-template-columns: 1fr;
+    }
+
+    .condition-info-item + .condition-info-item {
+        padding-left: 0;
+
+        border-left: 0;
+
+        border-top:
+            1px solid var(--mc-border);
+    }
+
+    .condition-awareness {
+        padding: 60px 0;
+    }
+
+    .condition-healthcare-cta {
+        padding: 55px 0;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-bottom .container {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .condition-card-header {
+        gap: 13px;
+
+        padding:
+            20px 18px 14px;
+    }
+
+    .condition-card-content {
+        padding:
+            0 18px 22px;
+    }
+
+    .condition-card-footer {
+        padding:
+            16px 18px 20px;
+    }
+
+    .condition-card-icon {
+        width: 48px;
+        height: 48px;
+
+        flex-basis: 48px;
+
+        border-radius: 13px;
+    }
+
+    .condition-card-title {
+        font-size: 2rem;
+    }
+
+    .condition-card-description {
+        font-size: 0.92rem;
+    }
+
+    .condition-card-topics {
+        gap: 6px;
+    }
+
+    .topic-tag {
+        font-size: 0.7rem;
+    }
+
+    .breadcrumb {
+        font-size: 0.76rem;
+    }
+}
+/* =========================================================
+   FACILITY CARD RESPONSIVE STYLES
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .facility-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .facility-visual {
+        justify-content: flex-start;
+    }
+
+    .facility-visual-card {
+        max-width: 100%;
+        min-height: 280px;
+    }
+
+}
+
+
+@media (max-width: 760px) {
+
+    .facility-hero {
+        padding: 55px 0;
+    }
+
+    .facility-details-section {
+        padding: 55px 0;
+    }
+
+    .facility-details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .facility-info-card {
+        padding: 25px;
+    }
+
+    .facility-notice-section {
+        padding-bottom: 55px;
+    }
+
+    .facility-notice {
+        padding: 24px;
+    }
+
+    .healthcare-cta {
+        padding: 60px 0;
+    }
+
+    .cta-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .cta-actions .btn {
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 520px) {
+
+    .breadcrumb-section {
+        padding: 18px 0;
+    }
+
+    .facility-main-info h1 {
+        font-size: 2.4rem;
+    }
+
+    .facility-description {
+        font-size: 0.95rem;
+    }
+
+    .facility-visual-card {
+        min-height: 230px;
+        padding: 25px;
+    }
+
+    .facility-visual-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 2.3rem;
+    }
+
+    .facility-info-card {
+        padding: 22px;
+    }
+
+    .facility-card-heading {
+        align-items: flex-start;
+    }
+
+    .hours-row {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .hours-row strong {
+        text-align: left;
+    }
+
+    .facility-notice {
+        flex-direction: column;
+    }
+
+    .facility-save-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+}
+/* =========================================================
+   HEALTH FACT CARD
+========================================================= */
+
+.fact-page {
+    background: var(--mc-background);
+}
+
+
+/* ---------------------------------------------------------
+   FACT HERO
+--------------------------------------------------------- */
+
+.fact-hero {
+    padding: 80px 0;
+    background: var(--mc-surface);
+}
+
+.fact-hero-grid {
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.fact-eyebrow,
+.source-label,
+.sidebar-label {
+    display: inline-block;
+    margin-bottom: 16px;
+
+    color: var(--mc-accent);
+
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+.fact-main-content h1 {
+    max-width: 800px;
+    margin: 0 0 24px;
+
+    color: var(--mc-primary-dark);
+
+    font-family: "DM Serif Display", serif;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1.06;
+}
+
+.fact-introduction {
+    max-width: 720px;
+    margin: 0 0 32px;
+
+    color: var(--mc-text-muted);
+
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+
+/* ---------------------------------------------------------
+   FACT META
+--------------------------------------------------------- */
+
+.fact-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+
+    margin-bottom: 28px;
+}
+
+.fact-meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.meta-label {
+    color: var(--mc-text-muted);
+
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.fact-meta-item strong {
+    color: var(--mc-primary);
+}
+
+
+/* ---------------------------------------------------------
+   SAVE FACT
+--------------------------------------------------------- */
+
+.fact-save-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px 18px;
+
+    border: 1px solid var(--mc-border);
+    border-radius: 8px;
+
+    background: var(--mc-background);
+    color: var(--mc-primary);
+
+    cursor: pointer;
+
+    font-family: inherit;
+    font-weight: 700;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.fact-save-btn:hover {
+    border-color: var(--mc-primary);
+
+    background: var(--mc-primary);
+    color: var(--mc-white);
+}
+
+.fact-save-btn.saved {
+    border-color: var(--mc-accent);
+
+    background: var(--mc-accent);
+    color: var(--mc-white);
+}
+
+.save-icon {
+    font-size: 1.2rem;
+}
+
+
+/* ---------------------------------------------------------
+   FACT VISUAL
+--------------------------------------------------------- */
+
+.fact-visual {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 350px;
+    padding: 45px;
+
+    overflow: hidden;
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--mc-primary),
+            var(--mc-primary-dark)
+        );
+
+    text-align: center;
+
+    box-shadow:
+        0 20px 50px rgba(24, 60, 53, 0.16);
+}
+
+.fact-visual::before {
+    content: "";
+
+    position: absolute;
+
+    width: 190px;
+    height: 190px;
+
+    top: -60px;
+    right: -60px;
+
+    border-radius: 50%;
+
+    background: rgba(197, 106, 74, 0.25);
+}
+
+.fact-visual::after {
+    content: "";
+
+    position: absolute;
+
+    width: 130px;
+    height: 130px;
+
+    bottom: -50px;
+    left: -40px;
+
+    border-radius: 50%;
+
+    background: rgba(113, 140, 126, 0.25);
+}
+
+.fact-symbol {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 110px;
+    height: 110px;
+
+    margin-bottom: 25px;
+
+    border-radius: 50%;
+
+    background: var(--mc-accent);
+
+    color: var(--mc-white);
+
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+.fact-visual p {
+    position: relative;
+    z-index: 1;
+
+    max-width: 280px;
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.82);
+
+    line-height: 1.7;
+}
+
+
+/* ---------------------------------------------------------
+   FACT DETAILS
+--------------------------------------------------------- */
+
+.fact-details-section {
+    padding: 80px 0;
+}
+
+.fact-details-layout {
+    display: grid;
+    grid-template-columns: 1.5fr 0.5fr;
+    gap: 30px;
+}
+
+.fact-content-card,
+.fact-sidebar-card {
+    padding: 35px;
+
+    border: 1px solid var(--mc-border);
+    border-radius: 16px;
+
+    background: var(--mc-surface);
+}
+
+.fact-content-card h2 {
+    margin: 0 0 22px;
+
+    color: var(--mc-primary-dark);
+
+    font-family: "DM Serif Display", serif;
+    font-size: 2.2rem;
+}
+
+.fact-content-card > p {
+    margin-bottom: 20px;
+
+    color: var(--mc-text-muted);
+
+    line-height: 1.85;
+}
+
+
+/* ---------------------------------------------------------
+   KEY POINT
+--------------------------------------------------------- */
+
+.fact-key-point {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+
+    margin-top: 30px;
+    padding: 22px;
+
+    border-left: 4px solid var(--mc-accent);
+
+    background: var(--mc-sti-light);
+}
+
+.key-point-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: var(--mc-accent);
+    color: var(--mc-white);
+
+    font-weight: 700;
+}
+
+.fact-key-point strong {
+    display: block;
+    margin-bottom: 5px;
+
+    color: var(--mc-primary-dark);
+}
+
+.fact-key-point p {
+    margin: 0;
+
+    color: var(--mc-text-muted);
+
+    line-height: 1.6;
+}
+
+
+/* ---------------------------------------------------------
+   SIDEBAR
+--------------------------------------------------------- */
+
+.fact-sidebar-card {
+    position: sticky;
+    top: 100px;
+}
+
+.fact-sidebar-card h3 {
+    margin: 0 0 25px;
+
+    color: var(--mc-primary-dark);
+
+    font-family: "DM Serif Display", serif;
+    font-size: 1.7rem;
+}
+
+.fact-related-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 16px 0;
+
+    border-top: 1px solid var(--mc-border);
+
+    color: var(--mc-primary);
+
+    font-weight: 600;
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        padding-left 0.2s ease;
+}
+
+.fact-related-link:hover {
+    padding-left: 5px;
+    color: var(--mc-accent);
+}
+
+
+/* ---------------------------------------------------------
+   SOURCE
+--------------------------------------------------------- */
+
+.fact-source-section {
+    padding-bottom: 80px;
+}
+
+.fact-source-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+
+    padding: 35px;
+
+    border-radius: 16px;
+
+    background: var(--mc-prostate-light);
+}
+
+.fact-source-card h2 {
+    margin: 0 0 10px;
+
+    color: var(--mc-primary-dark);
+
+    font-family: "DM Serif Display", serif;
+    font-size: 1.8rem;
+}
+
+.fact-source-card p {
+    max-width: 650px;
+    margin: 0;
+
+    color: var(--mc-text-muted);
+
+    line-height: 1.7;
+}
+
+.source-details {
+    min-width: 220px;
+
+    padding-left: 25px;
+
+    border-left: 1px solid var(--mc-border);
+}
+
+.source-details span {
+    display: block;
+    margin-bottom: 6px;
+
+    color: var(--mc-text-muted);
+
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.source-details strong {
+    color: var(--mc-primary);
+}
+
+
+/* ---------------------------------------------------------
+   CTA
+--------------------------------------------------------- */
+
+.fact-cta {
+    padding: 80px 0;
+
+    background: var(--mc-primary-dark);
+    color: var(--mc-white);
+}
+
+.fact-cta-content {
+    max-width: 780px;
+}
+
+.fact-cta .section-eyebrow {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: var(--mc-accent);
+
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+.fact-cta h2 {
+    margin: 0 0 18px;
+
+    font-family: "DM Serif Display", serif;
+
+    font-size: clamp(2rem, 4vw, 3.3rem);
+    line-height: 1.1;
+}
+
+.fact-cta p {
+    max-width: 700px;
+    margin-bottom: 28px;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    line-height: 1.7;
+}
+
+.fact-cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+/* =========================================================
+   FOOTER RESPONSIVE
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .footer-container {
+        grid-template-columns: 1.5fr 1fr 1fr;
+
+        gap: 40px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+        max-width: 500px;
+>>>>>>> 975d5e836addfc55e5e8cdbefeceb144ed4b103d
     }
 
 }
@@ -19,6 +1352,7 @@
 
 @media (max-width: 700px) {
 
+<<<<<<< HEAD
     .health-facts-section {
         padding: 60px 0;
     }
@@ -37,11 +1371,39 @@
 
     .facts-information-box {
         grid-template-columns: 1fr;
+=======
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+
+        padding-top: 50px;
+        padding-bottom: 45px;
+
+        gap: 40px 25px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .footer-disclaimer-content {
+        align-items: flex-start;
+    }
+
+    .footer-bottom-container {
+        flex-direction: column;
+        justify-content: center;
+
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        text-align: center;
+>>>>>>> 975d5e836addfc55e5e8cdbefeceb144ed4b103d
     }
 
 }
 
 
+<<<<<<< HEAD
 @media (max-width: 500px) {
 
     .health-facts-controls {
@@ -72,10 +1434,36 @@
 
     .facts-information-box {
         padding: 22px;
+=======
+@media (max-width: 480px) {
+
+    .footer-container {
+        grid-template-columns: 1fr;
+
+        gap: 32px;
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
+
+    .footer-column h3 {
+        margin-bottom: 14px;
+    }
+
+    .footer-disclaimer-content {
+        gap: 12px;
+    }
+
+    .footer-bottom-links {
+        flex-wrap: wrap;
+        justify-content: center;
+>>>>>>> 975d5e836addfc55e5e8cdbefeceb144ed4b103d
     }
 
 }
 /* =========================================================
+<<<<<<< HEAD
    ADMIN LOGIN RESPONSIVE
 ========================================================= */
 
@@ -169,6 +1557,552 @@
         align-items: flex-start;
         flex-direction: column;
         gap: 3px;
+=======
+   HEALTH CARD RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .health-card-content {
+        grid-template-columns: 1fr;
+        gap: 45px;
+        padding: 50px 40px;
+    }
+
+    .health-card-visual {
+        justify-content: flex-start;
+    }
+
+    .health-visual-shape {
+        min-height: 300px;
+    }
+
+    .health-overview-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .health-card-cta-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .health-card-header {
+        padding: 18px 22px;
+    }
+
+    .health-card-content {
+        padding: 40px 25px;
+    }
+
+    .health-card-footer {
+        grid-template-columns: 1fr;
+    }
+
+    .health-card-footer-item {
+        border-right: none;
+        border-bottom: 1px solid var(--mc-border);
+    }
+
+    .health-card-footer-item:last-child {
+        border-bottom: none;
+    }
+
+    .health-overview-section {
+        padding: 65px 0;
+    }
+
+    .health-awareness {
+        padding: 24px;
+    }
+
+    .health-card-cta {
+        padding: 65px 0;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .health-card-header {
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .health-card-category {
+        font-size: 0.68rem;
+    }
+
+    .save-health-btn {
+        padding: 8px 11px;
+    }
+
+    .save-text {
+        display: none;
+    }
+
+    .health-card-content {
+        padding: 35px 20px;
+    }
+
+    .health-card-copy h1 {
+        font-size: 2.4rem;
+    }
+
+    .health-card-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .health-card-actions .btn {
+        justify-content: center;
+    }
+
+    .health-visual-shape {
+        min-height: 270px;
+        padding: 25px;
+    }
+
+    .health-overview-item {
+        grid-template-columns: 35px 1fr 20px;
+        gap: 12px;
+        padding: 20px;
+    }
+
+    .health-awareness {
+        flex-direction: column;
+    }
+
+    .health-card-cta h2 {
+        font-size: 2.2rem;
+    }
+
+}
+/* =========================================================
+   NAVBAR RESPONSIVE
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .desktop-nav {
+        gap: 0;
+    }
+
+    .desktop-nav a {
+        padding-left: 9px;
+        padding-right: 9px;
+
+        font-size: 0.82rem;
+    }
+
+}
+
+
+@media (max-width: 850px) {
+
+    .desktop-nav {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .header-container {
+        min-height: 70px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .header-container {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .site-logo img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .site-logo span {
+        font-size: 1.45rem;
+    }
+
+}
+/* =========================================================
+   CONDITIONS MANAGEMENT
+========================================================= */
+
+.condition-name-cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.condition-name-cell strong {
+    display: block;
+    color: var(--mc-text);
+    font-size: 0.88rem;
+}
+
+.condition-name-cell span {
+    display: block;
+    margin-top: 3px;
+    color: var(--mc-text-muted);
+    font-size: 0.72rem;
+}
+
+.condition-mini-icon {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 10px;
+
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.condition-mini-icon.prostate {
+    background: var(--mc-prostate-light);
+    color: var(--mc-prostate);
+}
+
+.condition-mini-icon.urinary {
+    background: var(--mc-urinary-light);
+    color: var(--mc-urinary);
+}
+
+.condition-mini-icon.sti {
+    background: var(--mc-sti-light);
+    color: var(--mc-sti);
+}
+
+
+/* Category badges */
+
+.category-badge {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 6px 10px;
+
+    border-radius: 999px;
+
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+.category-badge.prostate {
+    background: var(--mc-prostate-light);
+    color: var(--mc-prostate);
+}
+
+.category-badge.urinary {
+    background: var(--mc-urinary-light);
+    color: var(--mc-primary);
+}
+
+.category-badge.sti {
+    background: var(--mc-sti-light);
+    color: var(--mc-accent);
+}
+
+
+/* Status */
+
+.status-badge.draft {
+    background: #eeeae1;
+    color: var(--mc-text-muted);
+}
+
+
+/* Search */
+
+.admin-search-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 25px;
+
+    margin-bottom: 25px;
+}
+
+.admin-search-tools {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.admin-search-box {
+    position: relative;
+}
+
+.admin-search-box > span {
+    position: absolute;
+
+    left: 13px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: var(--mc-text-muted);
+}
+
+.admin-search-box input {
+    width: 250px;
+
+    padding: 11px 14px 11px 38px;
+
+    border: 1px solid var(--mc-border);
+    border-radius: 10px;
+
+    background: var(--mc-surface);
+
+    color: var(--mc-text);
+
+    font-family: inherit;
+}
+
+.admin-select {
+    padding: 11px 35px 11px 12px;
+
+    border: 1px solid var(--mc-border);
+    border-radius: 10px;
+
+    background: var(--mc-surface);
+
+    color: var(--mc-text);
+
+    font-family: inherit;
+}
+
+
+/* Forms */
+
+.admin-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.admin-form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.admin-form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--mc-text);
+
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+
+.admin-form-group label span {
+    color: var(--mc-accent);
+}
+
+.admin-form-group input,
+.admin-form-group select,
+.admin-form-group textarea {
+    width: 100%;
+
+    padding: 12px 13px;
+
+    border: 1px solid var(--mc-border);
+    border-radius: 10px;
+
+    background: var(--mc-surface);
+
+    color: var(--mc-text);
+
+    font-family: inherit;
+    font-size: 0.88rem;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.admin-form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.admin-form-group input:focus,
+.admin-form-group select:focus,
+.admin-form-group textarea:focus {
+    border-color: var(--mc-secondary);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(113, 140, 126, 0.12);
+}
+
+.admin-form-group small {
+    display: block;
+
+    margin-top: 6px;
+
+    color: var(--mc-text-muted);
+
+    font-size: 0.72rem;
+}
+
+
+/* View Modal */
+
+.condition-view-content {
+    max-height: 65vh;
+    overflow-y: auto;
+}
+
+.condition-view-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin-bottom: 25px;
+}
+
+.condition-detail-block {
+    padding: 18px;
+
+    border: 1px solid var(--mc-border);
+    border-radius: 12px;
+
+    background: #faf8f3;
+}
+
+.condition-detail-block h3 {
+    margin: 0 0 8px;
+
+    color: var(--mc-primary);
+
+    font-size: 0.88rem;
+}
+
+.condition-detail-block p {
+    margin: 0;
+
+    color: var(--mc-text-muted);
+
+    font-size: 0.82rem;
+    line-height: 1.7;
+}
+
+.condition-info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+
+    margin-top: 15px;
+}
+
+
+/* Empty state */
+
+.admin-empty-state[hidden] {
+    display: none;
+}
+
+.admin-empty-state {
+    padding: 60px 20px;
+
+    text-align: center;
+}
+
+.empty-state-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 15px;
+
+    border-radius: 50%;
+
+    background: var(--mc-prostate-light);
+
+    color: var(--mc-primary);
+
+    font-size: 1.5rem;
+}
+
+.admin-empty-state h3 {
+    margin-bottom: 7px;
+
+    color: var(--mc-primary);
+}
+
+.admin-empty-state p {
+    margin-bottom: 20px;
+
+    color: var(--mc-text-muted);
+}
+
+
+/* Mobile */
+
+@media (max-width: 850px) {
+
+    .admin-search-header {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .admin-search-tools {
+        flex-wrap: wrap;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .admin-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-form-group.full-width {
+        grid-column: auto;
+    }
+
+    .admin-search-tools {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .admin-search-box input {
+        width: 100%;
+    }
+
+    .admin-select {
+        width: 100%;
+    }
+
+    .condition-info-grid {
+        grid-template-columns: 1fr;
+>>>>>>> 975d5e836addfc55e5e8cdbefeceb144ed4b103d
     }
 
 }
