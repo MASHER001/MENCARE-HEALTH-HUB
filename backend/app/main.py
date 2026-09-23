@@ -2,16 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.core.config import settings
-from app.routers import (
-    admin,
-    categories,
-    conditions,
-    facilities,
-    health_facts,
-    myth_facts,
-    search,
-    symptoms,
-)
+from app.routes import admin, myth_facts, search
 
 app = FastAPI(
     title=settings.PROJECT_NAME,
@@ -34,11 +25,6 @@ app.add_middleware(
 )
 
 for router in (
-    categories.router,
-    conditions.router,
-    symptoms.router,
-    facilities.router,
-    health_facts.router,
     myth_facts.router,
     search.router,
     admin.router,
