@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="MenCare Health Hub condition information card."
+    >
+
+    <title>Condition Card | MenCare Health Hub</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Main public CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <!-- Shared animations -->
+    <link rel="stylesheet" href="../css/animations.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         SITE HEADER
+    ====================================================== -->
+
+    <header class="site-header" id="siteHeader">
+
+        <div class="container header-container">
+
+            <a
+                href="../index.html"
+                class="site-brand"
+                aria-label="MenCare Health Hub Home"
+            >
+                <img
+                    src="/frontend/assets/icons/image.png"
+                    alt="MenCare Health Hub Logo"
+                    class="site-logo"
+                >
+
+                <span class="brand-name">
+                    MenCare
+                </span>
+            </a>
+
+
+            <!-- Desktop Navigation -->
+
+            <nav
+                class="site-nav"
+                id="siteNav"
+                aria-label="Main navigation"
+            >
+
+                <a href="../index.html">
+                    Home
+                </a>
+
+                <a
+                    href="health-topics.html"
+                    class="active"
+                >
+                    Health Topics
+                </a>
+
+                <a href="symptoms.html">
+                    Symptoms
+                </a>
+
+                <a href="healthcare.html">
+                    Healthcare
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+            </nav>
+
+
+            <!-- Mobile Menu Button -->
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="mobileNav"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+
+        <!-- Mobile Navigation -->
+
+        <nav
+            class="mobile-nav"
+            id="mobileNav"
+            aria-label="Mobile navigation"
+        >
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a
+                href="health-topics.html"
+                class="active"
+            >
+                Health Topics
+            </a>
+
+            <a href="symptoms.html">
+                Symptoms
+            </a>
+
+            <a href="healthcare.html">
+                Healthcare
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main>
+
+        <!-- Breadcrumb -->
+
+        <section class="condition-breadcrumb-section">
+
+            <div class="container">
+
+                <nav
+                    class="breadcrumb"
+                    aria-label="Breadcrumb"
+                >
+
+                    <a href="../index.html">
+                        Home
+                    </a>
+
+                    <span aria-hidden="true">
+                        /
+                    </span>
+
+                    <a href="health-topics.html">
+                        Health Topics
+                    </a>
+
+                    <span aria-hidden="true">
+                        /
+                    </span>
+
+                    <span>
+                        Condition
+                    </span>
+
+                </nav>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CONDITION CARD
+        ================================================== -->
+
+        <section class="condition-card-section">
+
+            <div class="container">
+
+                <article
+                    class="condition-card condition-card--prostate reveal-on-scroll"
+                    data-condition-id="bph"
+                    data-category="prostate"
+                >
+
+                    <!-- Card Header -->
+
+                    <div class="condition-card-header">
+
+                        <div class="condition-card-icon">
+
+                            <span aria-hidden="true">
+                                +
+                            </span>
+
+                        </div>
+
+
+                        <div class="condition-card-category">
+
+                            <span class="condition-category-label">
+                                Prostate Health
+                            </span>
+
+                            <span class="condition-status">
+                                Health Topic
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Card Content -->
+
+                    <div class="condition-card-content">
+
+                        <h1 class="condition-card-title">
+                            Benign Prostatic Hyperplasia
+                        </h1>
+
+                        <p class="condition-card-short-name">
+                            BPH
+                        </p>
+
+                        <p class="condition-card-description">
+
+                            Benign Prostatic Hyperplasia is a
+                            non-cancerous enlargement of the prostate
+                            that can affect urination as men get older.
+
+                        </p>
+
+
+                        <!-- Information -->
+
+                        <div class="condition-card-info">
+
+                            <div class="condition-info-item">
+
+                                <span class="condition-info-label">
+                                    Category
+                                </span>
+
+                                <strong>
+                                    Prostate Health
+                                </strong>
+
+                            </div>
+
+
+                            <div class="condition-info-item">
+
+                                <span class="condition-info-label">
+                                    Topic
+                                </span>
+
+                                <strong>
+                                    BPH
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Key Topics -->
+
+                        <div class="condition-card-topics">
+
+                            <span class="topic-tag">
+                                Symptoms
+                            </span>
+
+                            <span class="topic-tag">
+                                Risk Factors
+                            </span>
+
+                            <span class="topic-tag">
+                                Prevention
+                            </span>
+
+                            <span class="topic-tag">
+                                Diagnosis
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Card Footer -->
+
+                    <div class="condition-card-footer">
+
+                        <a
+                            href="condition-details.html?id=bph"
+                            class="btn btn-primary condition-learn-btn"
+                        >
+                            Learn More
+                            <span aria-hidden="true">
+                                →
+                            </span>
+                        </a>
+
+
+                        <button
+                            type="button"
+                            class="condition-save-btn"
+                            id="saveConditionBtn"
+                            aria-label="Save BPH condition"
+                            aria-pressed="false"
+                        >
+                            <span
+                                class="save-icon"
+                                aria-hidden="true"
+                            >
+                                ♡
+                            </span>
+
+                            <span class="save-text">
+                                Save
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             RELATED INFORMATION
+        ================================================== -->
+
+        <section class="condition-awareness">
+
+            <div class="container">
+
+                <div class="condition-awareness-content">
+
+                    <span class="section-eyebrow">
+                        LEARN BEFORE YOU ACT
+                    </span>
+
+                    <h2>
+                        Understanding symptoms starts with
+                        reliable information.
+                    </h2>
+
+                    <p>
+                        Symptoms can have different causes.
+                        MenCare provides educational information
+                        to help you understand health topics and
+                        know when professional healthcare may be
+                        appropriate.
+                    </p>
+
+                    <a
+                        href="symptoms.html"
+                        class="text-link"
+                    >
+                        Explore symptoms
+                        <span aria-hidden="true">→</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             HEALTHCARE CTA
+        ================================================== -->
+
+        <section class="condition-healthcare-cta">
+
+            <div class="container">
+
+                <div class="healthcare-cta-content">
+
+                    <div>
+
+                        <span class="section-eyebrow">
+                            NEED PROFESSIONAL HELP?
+                        </span>
+
+                        <h2>
+                            Know where to seek care.
+                        </h2>
+
+                        <p>
+                            Explore healthcare facilities and
+                            services that may be able to provide
+                            professional support.
+                        </p>
+
+                    </div>
+
+
+                    <a
+                        href="healthcare.html"
+                        class="btn btn-light"
+                    >
+                        Find Healthcare
+                        <span aria-hidden="true">
+                            →
+                        </span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="container footer-container">
+
+            <div class="footer-brand">
+
+                <a
+                    href="../index.html"
+                    class="footer-logo"
+                >
+                    <img
+                        src="/frontend/assets/icons/image.png"
+                        alt="MenCare Health Hub Logo"
+                    >
+
+                    <span>
+                        MenCare
+                    </span>
+                </a>
+
+                <p>
+                    Men's health information made clearer
+                    and easier to understand.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <div class="footer-column">
+
+                    <h3>
+                        Explore
+                    </h3>
+
+                    <a href="health-topics.html">
+                        Health Topics
+                    </a>
+
+                    <a href="symptoms.html">
+                        Symptoms
+                    </a>
+
+                    <a href="health-facts.html">
+                        Health Facts
+                    </a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>
+                        Healthcare
+                    </h3>
+
+                    <a href="healthcare.html">
+                        Find Healthcare
+                    </a>
+
+                    <a href="about.html">
+                        About MenCare
+                    </a>
+
+                    <a href="privacy.html">
+                        Privacy
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <div class="container">
+
+                <p>
+                    ©
+                    <span id="currentYear"></span>
+                    MenCare Health Hub.
+                    All rights reserved.
+                </p>
+
+                <p>
+                    Educational information only.
+                    Not a diagnosis.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+
+    <script src="/frontend/js/main.js"></script>
+    <script src="/frontend/js/conditions.js"></script>
+
+</body>
+</html>
